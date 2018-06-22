@@ -1,0 +1,21 @@
+{
+  "name": "ticket-booking",
+  "homepage": "https://github.com/anangnovriadi/ticket-booking",
+  "authors": [
+    "anangnovriadi <anangnov99@gmail.com>"
+  ],
+  "description": "pemesanan tiket pesawat dan kapal",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-maskmoney": "https://github.com/plentz/jquery-maskmoney.git#^3.0.2"
+  }
+}
