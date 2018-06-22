@@ -1,0 +1,15 @@
+{
+  "name": "sweetalert",
+  "homepage": "https://github.com/t4t5/sweetalert",
+  "version": "2.1.0",
+  "_release": "2.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.0",
+    "commit": "419427d2d80371313b7caf47ed47f11e0ffe6afd"
+  },
+  "_source": "https://github.com/t4t5/sweetalert.git",
+  "_target": "^2.1.0",
+  "_originalSource": "sweetalert",
+  "_direct": true
+}

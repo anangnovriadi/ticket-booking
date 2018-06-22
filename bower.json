@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery-maskmoney": "https://github.com/plentz/jquery-maskmoney.git#^3.0.2"
+    "jquery-maskmoney": "https://github.com/plentz/jquery-maskmoney.git#^3.0.2",
+    "sweetalert": "^2.1.0"
   }
 }
