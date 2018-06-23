@@ -12,8 +12,8 @@
             <li><a href="index.php"><i class="fa fa-home"></i> Beranda</a></li>
             <li class="treeview"> <a href="#"><i class="fa fa-archive"></i> <span>Tiket Pesawat</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
                 <ul class="treeview-menu">
-                    <li><a href="pesawat/dataTiketPesawat.php"><i class="fa fa-angle-right"></i> Data Tiket</a></li>
-                    <li><a href="pesawat/inputTiketPesawat.php"><i class="fa fa-angle-right"></i> Input Data</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Data Tiket</a></li>
+                    <li><a href="<?php echo base_url('admin/pesawat/addPesawat'); ?>"><i class="fa fa-angle-right"></i> Add Data</a></li>
                 </ul>
             </li>
             <li class="treeview"> <a href="#"><i class="fa fa-archive"></i> <span>Tiket Kapal</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
