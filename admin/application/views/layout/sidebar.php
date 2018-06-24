@@ -18,8 +18,8 @@
             </li>
             <li class="treeview"> <a href="#"><i class="fa fa-archive"></i> <span>Tiket Kapal</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
                 <ul class="treeview-menu">
-                    <li><a href="kapal/dataTiketKapal.php"><i class="fa fa-angle-right"></i> Data Tiket</a></li>
-                    <li><a href="kapal/inputTiketKapal.php"><i class="fa fa-angle-right"></i> Input Data</a></li>
+                    <li><a href="<?php echo base_url('admin/kapal') ?>"><i class="fa fa-angle-right"></i> Data Tiket</a></li>
+                    <li><a href="<?php echo base_url('admin/kapal/add'); ?>"><i class="fa fa-angle-right"></i> Input Data</a></li>
                 </ul>
             </li>
             <li class="treeview"> <a href="#"><i class="fa fa-briefcase"></i> <span>Data Pemesanan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>

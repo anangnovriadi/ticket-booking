@@ -32,7 +32,6 @@ class Pesawat extends CI_Controller
         $jam_tiba = $this->input->post('jam_tiba');
         $kode_pesawat = $this->input->post('kode_pesawat');
         $kelas_penerbangan = $this->input->post('kelas_penerbangan');
-        $stok = $this->input->post('stok');
         $harga = $this->input->post('harga');
         $reg = array(',00', 'Rp', '.');
         $regStr = array('', '', '');
@@ -78,7 +77,7 @@ class Pesawat extends CI_Controller
         $kelas_penerbangan = $this->input->post('kelas_penerbangan');
         $stok = $this->input->post('stok');
         $harga = $this->input->post('harga');
-        $status = $this->input->post('tersedia');
+        $status = $this->input->post('status');
         $reg = array(',00', 'Rp', '.');
         $regStr = array('', '', '');
 
@@ -94,7 +93,7 @@ class Pesawat extends CI_Controller
             'harga' => $hargaStr,
             'kode_pesawat' => $kode_pesawat,
             'kelas_penerbangan' => $kelas_penerbangan,
-            'tersedia' => $tersedia
+            'tersedia' => $status
         );
 
         $where = array('id' => $id);
