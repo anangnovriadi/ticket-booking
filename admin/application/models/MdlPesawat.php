@@ -12,6 +12,22 @@ class MdlPesawat extends CI_Model
     {
         $this->db->insert($table, $data);
     }
+
+    public function editPesawat($table, $where)
+    {
+        return $this->db->get_where($table, $where);
+    }
+
+    public function updatePesawat($table, $where, $data) 
+    {
+        $this->db->where($where);
+        $this->db->update($table, $data);
+    }
+
+    public function deletePesawat($table, $where)
+    {
+        $this->db->delete($table, $where);
+    }
 }
 
 ?>

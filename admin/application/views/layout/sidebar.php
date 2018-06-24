@@ -13,7 +13,7 @@
             <li class="treeview"> <a href="#"><i class="fa fa-archive"></i> <span>Tiket Pesawat</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
                 <ul class="treeview-menu">
                     <li><a href="<?php echo base_url('admin/pesawat'); ?>"><i class="fa fa-angle-right"></i> Data Tiket</a></li>
-                    <li><a href="<?php echo base_url('admin/pesawat/addPesawat'); ?>"><i class="fa fa-angle-right"></i> Add Data</a></li>
+                    <li><a href="<?php echo base_url('admin/pesawat/add'); ?>"><i class="fa fa-angle-right"></i> Add Data</a></li>
                 </ul>
             </li>
             <li class="treeview"> <a href="#"><i class="fa fa-archive"></i> <span>Tiket Kapal</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
