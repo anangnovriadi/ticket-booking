@@ -37,7 +37,7 @@
                                     <th>Jam Tiba</th>
                                     <th>Kelas Penerbangan</th>
                                     <th>Harga</th>
-                                    <th>Kesediaan</th>
+                                    <th>Status</th>
                                     <th>Tools</th>
                                 </tr>
                                 </thead>
@@ -68,9 +68,9 @@
                                         </td>
                                         <td>
                                             <center>
-                                                <a href=""><i class="fa fa-edit fa-lg"></i></a>
+                                                <a href="<?php echo base_url('admin/pesawat/edit/'.$rows->id); ?>"><i class="fa fa-edit fa-lg"></i></a>
                                                 <span class="spasi">
-                                                <a href=""></span><i class="fa fa-trash fa-lg"></a></i>
+                                                <a href="<?php echo base_url('admin/pesawat/delete/'.$rows->id) ?>"></span><i class="fa fa-trash fa-lg"></a></i>
                                             </center>
                                         </td>
                                     </tr>
