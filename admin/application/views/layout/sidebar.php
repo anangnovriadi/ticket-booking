@@ -24,14 +24,14 @@
             </li>
             <li class="treeview"> <a href="#"><i class="fa fa-briefcase"></i> <span>Data Pemesanan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
                 <ul class="treeview-menu">
-                    <li><a href="dataPemesanan/dataPemesananPesawat.php"><i class="fa fa-angle-right"></i> Data Pemesanan Pesawat</a></li>
-                    <li><a href="dataPemesanan/dataPemesananKapal.php"><i class="fa fa-angle-right"></i> Data Pemesanan Kapal</a></li>
+                    <li><a href="dataPemesanan/dataPemesananPesawat.php"><i class="fa fa-angle-right"></i> Pesawat</a></li>
+                    <li><a href="dataPemesanan/dataPemesananKapal.php"><i class="fa fa-angle-right"></i> Kapal</a></li>
                 </ul>
             </li>
-            <li class="treeview"> <a href="#"><i class="fa fa-map-marker"></i> <span>Wilayah</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+            <li class="treeview"> <a href="#"><i class="fa fa-globe"></i> <span>Kelola Front Web</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
                 <ul class="treeview-menu">
-                    <li><a href="wilayah/dataWilayahPesawat.php"><i class="fa fa-angle-right"></i> Data Wilayah Bandara</a></li>
-                    <li><a href="wilayah/dataWilayahKapal.php"><i class="fa fa-angle-right"></i> Data Wilayah Pelabuhan</a></li>
+                    <li><a href="<?php echo base_url('admin/alamat') ?>"><i class="fa fa-angle-right"></i> Alamat</a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Bank Pembayaran</a></li>
                 </ul>
             </li>
             <li><a href="laporan/laporanPesawat.php"><i class="fa fa-file"></i> Laporan</a></li>
