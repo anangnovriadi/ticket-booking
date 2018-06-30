@@ -40,7 +40,7 @@
                     <div class="col-md-6">
                         <fieldset class="form-group">
                             <label>Alamat Kantor</label>
-                            <textarea class="form-control" name="alamat" rows="5" placeholder="Alamat Kantor"><?php echo $rows->nama_kantor; ?></textarea>
+                            <textarea class="form-control" name="alamat" rows="5"><?php echo $rows->nama_kantor; ?></textarea>
                         </fieldset>
                     </div>
                     <div class="col-md-6">
