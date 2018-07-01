@@ -20,51 +20,64 @@
         </section>
 
         <div class="col-md-6 col-md-offset-3">
-        <section class="content-header">
-            <form action="<?php echo base_url(); ?>" method="post" class="chart-box">
-                <h4>Input Data Bank Pembayaran</h4>
-                <br/>
-                <div class="row">
-                  <div class="col-md-12">
-                    <fieldset class="form-group">
-                      <label>Nama Bank</label>
-                      <input class="form-control" name="nama_bank" id="basicInput" type="text" />
-                    </fieldset>
-                  </div>
+          <section class="content-header">
+
+            <?php if($this->session->flashdata('message')) { ?>
+              <div role="alert" class="alert alert-success">
+                <?php echo $this->session->flashdata('message'); ?>
+              </div>
+            <?php 
+              } else if($this->session->flashdata('msg_error')) {
+            ?>
+              <div role="alert" class="alert alert-danger">
+                <?php echo $this->session->flashdata('msg_error'); ?>
+              </div>
+            <?php 
+              }
+            ?>
+
+            <form action="<?php echo base_url('admin/pembayaran/create'); ?>" enctype="multipart/form-data" method="post" class="chart-box">
+              <h4>Input Data Bank Pembayaran</h4>
+              <br/>
+              <div class="row">
+                <div class="col-md-6">
+                  <fieldset class="form-group">
+                    <label>Nama Bank</label>
+                    <input class="form-control" name="nama_bank" id="basicInput" type="text" />
+                  </fieldset>
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <fieldset class="form-group">
-                      <label>Atas Nama</label>
-                      <input class="form-control" name="atas_nama" type="text" />
-                    </fieldset>
-                  </div>
+                <div class="col-md-6">
+                  <fieldset class="form-group">
+                    <label>Atas Nama</label>
+                    <input class="form-control" name="atas_nama" type="text" />
+                  </fieldset>
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <fieldset class="form-group">
-                      <label>No Rekening</label>
-                      <input class="form-control" name="no_rekening" id="basicInput" type="text" />
-                    </fieldset>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <fieldset class="form-group">
+                    <label>No Rekening</label>
+                    <input class="form-control" name="no_rekening" id="basicInput" type="text" />
+                  </fieldset>
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <fieldset class="form-group">
-                      <label>Gambar Bank</label>
-                      <input class="form-control" name="gambar" id="basicInput" type="file" />
-                    </fieldset>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <fieldset class="form-group">
+                    <label>Gambar Bank</label>
+                    <input class="form-control" name="gambar" id="basicInput" type="file" />
+                  </fieldset>
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <fieldset class="form-group">
-                      <button type="submit" name="insert" class="btn btn-primary">Submit</button>
-                    </fieldset>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <fieldset class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </fieldset>
                 </div>
+              </div>
             </form>
-        </section>
+          </section>
         </div>
 
         <section class="content container-fluid">
@@ -86,14 +99,15 @@
                                 </thead>
                                 <tbody>
                                 <?php
-                                   
+                                  $no = 1;   
+                                  foreach($tmpBank as $rows) {
                                 ?>
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><?php echo $no; ?></td>
+                                        <td><?php echo $rows->nama_bank; ?></td>
+                                        <td><?php echo $rows->atas_nama; ?></td>
+                                        <td><?php echo $rows->no_rekening; ?></td>
+                                        <td><?php echo $rows->img_bank; ?></td>
                                         <td>
                                             <center>
                                                 <a href="<?php echo base_url(); ?>"><i class="fa fa-edit fa-lg"></i></a>
@@ -103,7 +117,8 @@
                                         </td>
                                     </tr>
                                 <?php
-                                    
+                                    $no++;
+                                  }
                                 ?>
                                 </tbody>
                             </table>

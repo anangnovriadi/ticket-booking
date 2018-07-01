@@ -1,5 +1,5 @@
 <header class="main-header dark-bg"> 
-    <a href="./index.html" class="logo dark-bg"> 
+    <a href="<?php echo base_url('admin') ?>" class="logo dark-bg"> 
     <span class="logo-mini"><img src="<?php echo base_url('assets/admin/img/logo.png'); ?>" alt="Ovio" /></span> 
     <span class="logo-lg"><img src="<?php echo base_url('assets/admin/img/logo-admin.png'); ?>" alt="Ovio" /></span> </a> 
     <nav class="navbar navbar-static-top" role="navigation"> 
