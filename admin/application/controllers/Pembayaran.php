@@ -52,6 +52,14 @@ class Pembayaran extends CI_Controller
             redirect(base_url('admin/pembayaran'));
         }
     }
+
+    public function delete($id)
+    {
+        $where = array('id' => $id);
+        $this->mdlpembayaran->delBankPemb('tb_cms_pembayaran', $where);
+
+        redirect(base_url('admin/pembayaran'));
+    }
 }
 
 ?>

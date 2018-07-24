@@ -1,0 +1,83 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+@media (min-width: 320px) and (max-width: 480px) {
+	body, html{
+		overflow-x: hidden;
+	}
+	.font-xl{font-size: 40px;}
+	.font-lg{font-size: 24px;}
+	.font-md{font-size: 16px;}
+	.font-sm{font-size: 14px;}
+	.font-xs{font-size: 12px;}
+	.section{
+		width: 90vw;
+		margin: auto;
+	}
+	#navbar{
+		margin: 0px;
+		height: 90px;
+		overflow-y: hidden;
+		transition-duration: 0.5s;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+	}
+	#navbar.display{
+		height: 100vh !important;
+	}
+	#navbar ul{
+		margin: 0px;
+		padding: 0px;
+	}
+	#navbar ul li{
+		display: block;
+		text-align: center;
+		margin-top: 30px;
+		margin-left: 0px;
+	}
+	.toggle{
+		display: block;
+		padding: 20px 0;
+	}
+	#header .bg-white{
+		text-align: center;
+		margin-bottom: -50px;
+	}
+	#header .bg-white .form-control{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#header .bg-white .btn{
+		width: 100%;
+	}
+
+	#footer div{
+		text-align: center;
+		padding: 5px;
+		margin-bottom: 0px;
+	}
+	#footer div.col-md-5{
+		margin-bottom: 20px;
+	}
+	#footer .col-md-5 p{
+		padding: 5px !important;
+		margin: 0px;
+	}
+	#footer .line{
+		margin: auto;
+		width: 85px;
+	}
+	.detail-header{
+		display: none;
+	}
+	#detail{
+		margin-top: 70px;
+	}
+	#detail .btn-sm{
+		margin-bottom: 10px;
+	}
+	#detail form{
+		margin-top: 20px;
+	}
+}	

@@ -12,6 +12,11 @@ class MdlPembayaran extends CI_Model
     {
         $this->db->insert($table, $data);
     }
+
+    public function delBankPemb($table, $where)
+    {
+        $this->db->delete($table, $where);
+    }
 }
 
 ?>
