@@ -35,7 +35,7 @@
                 </ul>
             </li>
             <li><a href="laporan/laporanPesawat.php"><i class="fa fa-file"></i> Laporan</a></li>
-            <li><a href="setting/pengaturan.php"><i class="fa fa-gears"></i> Pengaturan</a></li> 
+            <li><a href="<?php echo base_url('admin/pengaturan'); ?>"><i class="fa fa-gears"></i> Pengaturan</a></li> 
             </li>
         </ul>
     </section>

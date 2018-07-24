@@ -2328,3 +2328,11 @@ iframe {
 	left: 0;
 }
 }
+
+/* Custom */
+
+.btn-cus-info {
+	padding: 2px 20px;
+}
+
+/* End Custom */

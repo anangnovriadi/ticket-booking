@@ -109,11 +109,7 @@
                                         <td><?php echo $rows->no_rekening; ?></td>
                                         <td><?php echo $rows->img_bank; ?></td>
                                         <td>
-                                            <center>
-                                                <a href="<?php echo base_url(); ?>"><i class="fa fa-edit fa-lg"></i></a>
-                                                <span class="spasi">
-                                                <a href="<?php echo base_url() ?>"></span><i class="fa fa-trash fa-lg"></a></i>
-                                            </center>
+                                          <a href="<?php echo base_url('admin/pembayaran/delete/'.$rows->id) ?>"></span><i class="fa fa-trash fa-lg"></a></i>  
                                         </td>
                                     </tr>
                                 <?php
