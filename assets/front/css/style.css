@@ -347,3 +347,43 @@ a.input-group-addon{
 .modal .bg-purple{
 	color: #fafafa !important;
 }
+
+/* Custom */
+
+.section-p {
+	margin-top: 2%;
+}
+
+.section-c {
+	text-align: center;
+	width: 100%;
+	padding-bottom: 2%;
+}
+
+.img-partner {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    padding: 8px;
+	border: 4px solid #cfd5db;
+	border-radius: 50%;
+}
+
+.row-w {
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+.col-ce {
+	text-align: center;
+}
+
+.txt-right {
+	text-align: right;
+}
+
+.pb-3 {
+	padding-bottom: 3% !important;
+}
+
+/* End Custom */
