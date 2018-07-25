@@ -16,8 +16,8 @@
 	<div class="row bg-img" id="header">
 		<div class="section">
 			<div class="col-md-7 font-white">
-				<h1 class="font-bold font-xl">Esthana House Rent</h1>
-				<p class="font-regular font-md">Find your favorite properties for rent:</p>
+				<h1 class="font-bold font-xl">Reni Jaya Travel</h1>
+				<p class="font-regular font-md">Pemesanan Tiket Pesawat dan Kapal</p>
 			</div>
 			<div class="col-md-12 bg-white font-black">
 				<form class="form-inline" method="post" action="list.html">
@@ -45,97 +45,7 @@
 		</div>
 	</div>
 	<!-- HEADER END -->
-	<!-- LISTING -->
-	<div class="row" id="listing">
-		<div class="section">
-			<div class="col-md-12 text-center">
-				<h3 class="font-purple font-bold font-lg">New For Rent</h3>
-				<p class="font-medium font-md">Arcu risus quis varius quam quisque id.</p><br>
-			</div>
-			<div class="col-md-4">
-				<div class="list-panel">
-					<div class="list-panel-head bg-img font-white" style="background-image: url(assets/images/listing/1.jpg);">
-						<div>
-							<h4 class="font-bold font-md">Agatha House</h4>
-							<p class="font-sm"><i class="fa fa-map-marker"></i> Ketintang, Surabaya</p>
-						</div>
-					</div>
-					<div class="list-panel-body bg-white">
-						<span class="badge badge-dark">$300/month</span> 
-						<span class="badge badge-dark">3 Bedrooms</span> 
-						<span class="badge badge-dark">Parking Area</span> 
-						<span class="badge badge-dark">Pet OK</span>
-					</div>
-					<div class="list-panel-foot">
-						<a href="detail.html" class="btn bg-purple btn-block btn-sm"><i class="fa fa-caret-right"></i> VIEW MORE</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="list-panel">
-					<div class="list-panel-head bg-img font-white" style="background-image: url(assets/images/listing/2.jpg);">
-						<div>
-							<h4 class="font-bold font-md">Leblanc Homestay</h4>
-							<p class="font-sm"><i class="fa fa-map-marker"></i> Lowokwaru, Malang</p>
-						</div>
-					</div>
-					<div class="list-panel-body bg-white">
-						<span class="badge badge-dark">$300/month</span> 
-						<span class="badge badge-dark">3 Bedrooms</span> 
-						<span class="badge badge-dark">Parking Area</span> 
-						<span class="badge badge-dark">Pet OK</span>
-					</div>
-					<div class="list-panel-foot">
-						<a href="detail.html" class="btn bg-purple btn-block btn-sm"><i class="fa fa-caret-right"></i> VIEW MORE</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="list-panel">
-					<div class="list-panel-head bg-img font-white" style="background-image: url(assets/images/listing/3.jpg);">
-						<div>
-							<h4 class="font-bold font-md">Conan Doyle Villa</h4>
-							<p class="font-sm"><i class="fa fa-map-marker"></i> Nongkojajar, Pasuruan</p>
-						</div>
-					</div>
-					<div class="list-panel-body bg-white">
-						<span class="badge badge-dark">$300/month</span> 
-						<span class="badge badge-dark">3 Bedrooms</span> 
-						<span class="badge badge-dark">Parking Area</span> 
-						<span class="badge badge-dark">Pet OK</span>
-					</div>
-					<div class="list-panel-foot">
-						<a href="detail.html" class="btn bg-purple btn-block btn-sm"><i class="fa fa-caret-right"></i> VIEW MORE</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4 col-md-offset-4 text-center">
-				<a href="listing.html" class="btn bg-purple btn-lg btn-block"><i class="fa fa-caret-right"></i> VIEW ALL PROPERTIES</a>
-			</div>
-		</div>
-	</div>
-	<!-- LISTING END -->
-	<!-- HOW TO RESERVE -->
-	<div class="row bg-img" id="howtoreserve">
-		<div class="section font-white text-center">
-			<div class="col-md-4">
-				<i class="fa fa-search fa-5x"></i><br>
-				<h3 class="font-bold font-lg">Search Properties</h3>
-				<p class="font-sm">Odio tempor orci dapibus ultrices in iaculis nunc sed augue lacus viverra vitae congue eu consequat ac.</p>
-			</div>
-			<div class="col-md-4">
-				<i class="fa fa-edit fa-5x"></i><br>
-				<h3 class="font-bold font-lg">Fill Reserve Form</h3>
-				<p class="font-sm">Ac ut consequat semper viverra nam libero justo laoreet sit amet cursus sit amet dictum sit amet.</p>
-			</div>
-			<div class="col-md-4">
-				<i class="fa fa-handshake-o fa-5x"></i><br>
-				<h3 class="font-bold font-lg">Deal with Owner</h3>
-				<p class="font-sm">Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris a diam maecenas sed enim ut.</p>
-			</div>
-		</div>
-	</div>
-	<!-- HOW TO RESERVE END -->
+
 	<!-- CITY -->
 	<div class="row" id="city">
 		<div class="section">
@@ -144,37 +54,37 @@
 				<p class="font-medium font-md">Volutpat blandit aliquam etiam erat velit scelerisque.</p>
 			</div>
 			<div class="col-md-8">
-				<div class="city-panel bg-img" style="background-image: url(assets/images/city/surabaya.jpg);">
+				<div class="city-panel bg-img" style="background-image: url(assets/front/images/city/surabaya.jpg);">
 					<a href="#" class="btn bg-purple font-medium"><i class="fa fa-caret-right"></i> SURABAYA</a>
 				</div>
 			</div>
 			<div class="col-md-4">
-				<div class="city-panel bg-img" style="background-image: url(assets/images/city/malang.jpg);">
+				<div class="city-panel bg-img" style="background-image: url(assets/front/images/city/malang.jpg);">
 					<a href="#" class="btn bg-purple font-medium"><i class="fa fa-caret-right"></i> MALANG</a>
 				</div>
 			</div>
 			<div class="col-md-4">
-				<div class="city-panel bg-img" style="background-image: url(assets/images/city/blitar.jpg);">
+				<div class="city-panel bg-img" style="background-image: url(assets/front/images/city/blitar.jpg);">
 					<a href="#" class="btn bg-purple font-medium"><i class="fa fa-caret-right"></i> BLITAR</a>
 				</div>
 			</div>
 			<div class="col-md-4">
-				<div class="city-panel bg-img" style="background-image: url(assets/images/city/pasuruan.jpg);">
+				<div class="city-panel bg-img" style="background-image: url(assets/front/images/city/pasuruan.jpg);">
 					<a href="#" class="btn bg-purple font-medium"><i class="fa fa-caret-right"></i> PASURUAN</a>
 				</div>
 			</div>
 			<div class="col-md-4">
-				<div class="city-panel bg-img" style="background-image: url(assets/images/city/probolinggo.jpg);">
+				<div class="city-panel bg-img" style="background-image: url(assets/front/images/city/probolinggo.jpg);">
 					<a href="#" class="btn bg-purple font-medium"><i class="fa fa-caret-right"></i> PROBOLINGGO</a>
 				</div>
 			</div>
 			<div class="col-md-4">
-				<div class="city-panel bg-img" style="background-image: url(assets/images/city/kediri.jpg);">
+				<div class="city-panel bg-img" style="background-image: url(assets/front/images/city/kediri.jpg);">
 					<a href="#" class="btn bg-purple font-medium"><i class="fa fa-caret-right"></i> KEDIRI</a>
 				</div>
 			</div>
 			<div class="col-md-8">
-				<div class="city-panel bg-img" style="background-image: url(assets/images/city/batu.jpg);">
+				<div class="city-panel bg-img" style="background-image: url(assets/front/images/city/batu.jpg);">
 					<a href="#" class="btn bg-purple font-medium"><i class="fa fa-caret-right"></i> BATU</a>
 				</div>
 			</div>
@@ -185,55 +95,61 @@
 	<div class="row bg-img" id="rentyour">
 		<div class="section font-white">
 			<div class="col-md-9">
-				<h2 class="font-lg font-bold">Want to Rent Your Property?</h2><br>
-				<p class="font-md font-medium">Amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis.</p><br>
+				<h2 class="font-lg font-bold">Jasa dan Layanan</h2><br>
+				<p class="font-md font-medium">Reni Jaya Travel adalah jasa yang menjual tiket pesawat maupun kapal antar propinsi maupun pulau.</p><br>
 				<a href="#" class="btn btn-lg bg-purple font-bold">CONTACT US</a>
 			</div>
 		</div>
 	</div>
 	<!-- RENT YOUR PROPERTIES END-->
-	<!-- SUBSCRIBE -->
+
 	<div class="row bg-white" id="subscribe">
-		<div class="section">
-			<div class="col-md-8 col-md-offset-2 text-center">
-				<h3 class="font-purple font-bold font-lg">Subscribe New Information</h3>
-				<p class="font-medium font-md">Venenatis urna cursus eget nunc scelerisque viverra.</p><br>
-				<form class="input-group input-group-lg">
-					<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-					<input type="text" class="form-control" placeholder="Your Email...">
-					<a href="" class="input-group-addon bg-purple">Subscribe</a>
-				</form>
+		<div class="section section-p">
+			<div class="section-c">
+				<h3>Partner Tiket Pesawat dan Kapal</h3>
+			</div>
+			<div class="row row-w">
+				<div class="col-md-3 col-ce">
+					<img class="img-partner" src="<?php echo base_url('assets/front/images/airasia.jpg'); ?>">
+				</div>
+				<div class="col-md-3 col-ce">
+					<img class="img-partner" src="<?php echo base_url('assets/front/images/lion.png'); ?>">
+				</div>
+				<div class="col-md-3 col-ce">
+					<img class="img-partner" src="<?php echo base_url('assets/front/images/citilink.jpg'); ?>">
+				</div>
+				<div class="col-md-3 col-ce">
+					<img class="img-partner" src="<?php echo base_url('assets/front/images/garuda.jpg'); ?>">
+				</div>
 			</div>
 		</div>
 	</div>
-	<!-- SUBSCRIBE END -->
+	
 	<!-- FOOTER -->
 	<div class="row bg-purple-darken font-white" id="footer">
 		<div class="section">
 			<div class="col-md-5">
-				<img src="assets/images/logo-light.png" width="50%"><br><br>
-				<p class="font-sm font-medium"><i class="fa fa-map-marker"></i> Jl. Gajah Mada No. 01, Nongkojajar, Pasuruan</p>
-				<p class="font-sm font-medium"><i class="fa fa-envelope"></i> inbox@esthana.co.id</p>
-				<p class="font-sm font-medium"><i class="fa fa-phone"></i> (+62) 822 4584 9926</p><br>
+				<h2 class="font-bold font-lg">Alamat</h2>
+				<section class="line"></section>
+				<p class="font-sm font-medium"><i class="fa fa-map-marker"></i> Jalan Johar No.14, Surabaya</p>
+				<p class="font-sm font-medium"><i class="fa fa-phone"></i> (031) 70120731</p>
+				<p class="font-sm font-medium"><i class="fa fa-whatsapp"></i> 082 143463188</p>
+			</div>
+			<div class="col-md-7 txt-right">
+				<h2 class="font-bold font-lg pb-3">Kunjungi Kami</h2>
 				<a href="#" class="follow hvr-rectangle-out"><i class="fa fa-instagram fa-2x"></i></a>
 				<a href="#" class="follow hvr-rectangle-out"><i class="fa fa-facebook fa-2x"></i></a>
 				<a href="#" class="follow hvr-rectangle-out"><i class="fa fa-twitter fa-2x"></i></a>
 				<a href="#" class="follow hvr-rectangle-out"><i class="fa fa-google-plus fa-2x"></i></a>
 			</div>
-			<div class="col-md-7">
-				<h2 class="font-bold font-lg">About Us</h2>
-				<section class="line"></section>
-				<p class="font-medium font-sm">Esthana House Rent is a house rent service based in East Java, Indonesia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis convallis convallis tellus id interdum.</p>
-				<a href="about.html" class="btn btn-default font-purple"><i class="fa fa-caret-right"></i> Read More</a>
-			</div>
 			<div class="col-md-12 text-center">
 				<hr>
 			</div>
 			<div class="col-md-6">
-				<b>Copyright &copy; Esthana - House Rent HTML Template.</b>
+				<b>Copyright &copy; Reni Jaya Travel</b>
 			</div>
 			<div class="col-md-6 text-right">
-				<b>Created by <a href="http://instagram.com/esafriansya/"><u>Esafriansya</u></a> with <i class="fa fa-heart"></i></b>
+				<b>Created by <a href="#"><u>Anang Novriadi and Team</u></a></i></b>
 			</div>
 		</div>
 	</div>
