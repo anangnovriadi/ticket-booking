@@ -42,6 +42,14 @@ class Login extends CI_Controller
             redirect($this->agent->referrer());
         }
     }
+
+    public function logout() {
+        if($this->session->userdata('hak_akses') == 'admin') {
+            $this->session->sess_destroy();
+        }
+
+        redirect($this->agent->referrer());
+    }
 }
 
 ?>

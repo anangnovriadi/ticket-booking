@@ -14,11 +14,13 @@
 <div class="container-fluid">
 	<!-- HEADER -->
 	<div class="row bg-img" id="header">
-		<div class="section">
+		<div class="section p-relative tp-30">
 			<div class="col-md-7 font-white">
 				<h1 class="font-bold font-xl">Reni Jaya Travel</h1>
 				<p class="font-regular font-md">Pemesanan Tiket Pesawat dan Kapal</p>
 			</div>
+		</div>
+		<div class="section p-relative">	
 			<div class="col-md-12 bg-white font-black">
 				<form class="form-inline" method="post" action="list.html">
 					<select class="form-control input-lg">

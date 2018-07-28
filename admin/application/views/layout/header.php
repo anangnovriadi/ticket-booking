@@ -10,7 +10,9 @@
                 <ul class="dropdown-menu">
                     <li><a href="#"><i class="icon-gears"></i> Account Setting</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                    <form action="<?php echo base_url('admin/login/logout'); ?>" method="post" class="chart-box">
+                        <li><button type="submit"><i class="fa fa-power-off"></i> Logout</button></li>
+                    </form>
                 </ul>
                 </li>
             </ul>
