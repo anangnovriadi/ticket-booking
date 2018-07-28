@@ -1,6 +1,6 @@
 # ticket-booking
 Pemesanan Tiket Pesawat dan Kapal Online
 
-Build with Codeigniter 3.x
+<li>Build with Codeigniter 3.x</li>
 
-See my project on branch develop
+<li>See my project on branch develop</li>
