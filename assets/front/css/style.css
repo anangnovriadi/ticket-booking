@@ -168,16 +168,22 @@ a:hover {
 }
 #header .bg-white {
 	padding: 20px;
-	border: 2px solid #e1e1e1;
+	border: 1px solid #e1e1e1;
+	border-radius: 5px;
 	margin-top: 34%;
 	margin-bottom: 3%;
+	box-shadow: 0px 5px 20px #d6dee4;
 }
+.cus-kapal {
+	margin-top: 2% !important;
+}
+
 #header .bg-white .form-control {
-	width: 250px;
+	width: auto;
 	margin-right: 10px;
 }
 #header .bg-white .btn {
-	width: 120px;
+	width: 200px;
 }
 
 #listing {
@@ -260,7 +266,8 @@ a:hover {
 }
 
 #rentyour {
-	background-image: url(../images/rentyour.jpg);
+	/* background-image: url(../images/rentyour.jpg); */
+	background-color: #225470;
 	padding: 60px 0;
 }
 #rentyour a {
@@ -444,6 +451,35 @@ a.input-group-addon {
 
 .tp-30 {
 	top: 30%;
+}
+
+.font-black {
+	color: black;
+	font-weight: bold;
+}
+
+.mt-inner {
+	margin-top: 5%;
+}
+
+.pt-inner2 {
+	padding-top: 2%;
+}
+
+.img-responsive {
+	width: 100%;
+	height: auto;
+}
+
+.box-shadow-bt {
+	box-shadow: 0 0 30px rgba(7, 51, 84, 0.17);
+}
+
+.back-banner {
+	margin-top: 5%;
+	background: linear-gradient(to right, rgb(27, 160, 226), rgb(27, 160, 226));
+	height: 100px;
+	width: 100%;
 }
 
 /* End Custom */

@@ -16,22 +16,64 @@
 	<div class="row bg-img" id="header">
 		<div class="section p-relative tp-30">
 			<div class="col-md-7 font-white">
-				<h1 class="font-bold font-xl">Reni Jaya Travel</h1>
-				<p class="font-regular font-md">Pemesanan Tiket Pesawat dan Kapal</p>
+				<h1 class="font-bold font-xl font-black">Reni Jaya Travel</h1>
+				<p class="font-regular font-md font-black">Pemesanan Tiket Pesawat dan Kapal</p>
 			</div>
 		</div>
 		<div class="section p-relative">	
 			<div class="col-md-12 bg-white font-black">
-				<form class="form-inline" method="post" action="list.html">
+				<?php echo form_open(base_url('search/searchPesawat'), 'class="form-inline col-ce"'); ?>
+				<!-- <form class="form-inline col-ce" method="post" action="list.html"> -->
+					<select name="kota_asal" class="form-control input-lg">
+						<option>Pilih Kota Asal</option>
+						<option>Jakarta</option>
+						<option>Bandung</option>
+						<option>Kediri</option>
+						<option>Malang</option>
+						<option>Pasuruan</option>
+						<option>Probolinggo</option>
+						<option>Surabaya</option>
+					</select>
+					<select name="kota_tujuan" class="form-control input-lg">
+						<option>Pilih Kota Tujuan</option>
+						<option>Jakarta</option>
+						<option>Bandung</option>
+						<option>Kediri</option>
+						<option>Malang</option>
+						<option>Pasuruan</option>
+						<option>Probolinggo</option>
+						<option>Surabaya</option>
+					</select>
+					<select name="" class="form-control input-lg">
+						<option>Jam Keberangkatan</option>
+						<option>Jakarta</option>
+						<option>Malang</option>
+						<option>Kediri</option>
+						<option>Malang</option>
+						<option>Pasuruan</option>
+						<option>Probolinggo</option>
+						<option>Surabaya</option>
+					</select>
+					<input type="submit" value="Cari Penerbangan" class="btn bg-purple btn-lg">
+				<!-- </form> -->
+				<?php echo form_close(); ?>
+			</div>
+			<?php 
+				
+			?>
+		</div>
+		<div class="section p-relative">	
+			<div class="col-md-12 bg-white cus-kapal font-black">
+				<form class="form-inline col-ce" method="post" action="list.html">
 					<select class="form-control input-lg">
-						<option>-- Type --</option>
+						<option>Pelabuhan Asal</option>
 						<option>House</option>
 						<option>Apartment</option>
 						<option>Villa</option>
 						<option>Other</option>
 					</select>
 					<select class="form-control input-lg">
-						<option>-- City --</option>
+						<option>Pelabuhan Tujuan</option>
 						<option>Batu</option>
 						<option>Blitar</option>
 						<option>Kediri</option>
@@ -40,8 +82,17 @@
 						<option>Probolinggo</option>
 						<option>Surabaya</option>
 					</select>
-					<input type="text" class="form-control input-lg" placeholder="Search Keyword..">
-					<input type="submit" value="SEARCH" class="btn bg-purple btn-lg">
+					<select class="form-control input-lg">
+						<option>Jam Keberangkatan</option>
+						<option>Batu</option>
+						<option>Blitar</option>
+						<option>Kediri</option>
+						<option>Malang</option>
+						<option>Pasuruan</option>
+						<option>Probolinggo</option>
+						<option>Surabaya</option>
+					</select>
+					<input type="submit" value="Cari Kapal" class="btn bg-purple btn-lg">
 				</form>
 			</div>
 		</div>
@@ -128,33 +179,7 @@
 	</div>
 	
 	<!-- FOOTER -->
-	<div class="row bg-purple-darken font-white" id="footer">
-		<div class="section">
-			<div class="col-md-5">
-				<h2 class="font-bold font-lg">Alamat</h2>
-				<section class="line"></section>
-				<p class="font-sm font-medium"><i class="fa fa-map-marker"></i> Jalan Johar No.14, Surabaya</p>
-				<p class="font-sm font-medium"><i class="fa fa-phone"></i> (031) 70120731</p>
-				<p class="font-sm font-medium"><i class="fa fa-whatsapp"></i> 082 143463188</p>
-			</div>
-			<div class="col-md-7 txt-right">
-				<h2 class="font-bold font-lg pb-3">Kunjungi Kami</h2>
-				<a href="#" class="follow hvr-rectangle-out"><i class="fa fa-instagram fa-2x"></i></a>
-				<a href="#" class="follow hvr-rectangle-out"><i class="fa fa-facebook fa-2x"></i></a>
-				<a href="#" class="follow hvr-rectangle-out"><i class="fa fa-twitter fa-2x"></i></a>
-				<a href="#" class="follow hvr-rectangle-out"><i class="fa fa-google-plus fa-2x"></i></a>
-			</div>
-			<div class="col-md-12 text-center">
-				<hr>
-			</div>
-			<div class="col-md-6">
-				<b>Copyright &copy; Reni Jaya Travel</b>
-			</div>
-			<div class="col-md-6 text-right">
-				<b>Created by <a href="#"><u>Anang Novriadi and Team</u></a></i></b>
-			</div>
-		</div>
-	</div>
+	<?php $this->load->view('layout/footer'); ?>
 	<!-- FOOTER END -->
 </div>
 <!-- MAIN CONTENT END -->
