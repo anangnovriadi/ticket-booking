@@ -6,56 +6,45 @@
 	<?php $this->load->view('layout/css'); ?>
 </head>
 <body>
-<!-- NAVBAR -->
-<?php $this->load->view('layout/header'); ?>
-<!-- NAVBAR END -->
 
-<!-- MAIN CONTENT -->
+<?php $this->load->view('layout/header'); ?>
+
 <div class="container-fluid">
-	<!-- HEADER -->
 	<div class="row bg-img" id="header">
 		<div class="section p-relative tp-30">
 			<div class="col-md-7 font-white">
-				<h1 class="font-bold font-xl font-black">Reni Jaya Travel</h1>
-				<p class="font-regular font-md font-black">Pemesanan Tiket Pesawat dan Kapal</p>
+				<h1 class="font-bold font-xl">Reni Jaya Travel</h1>
+				<p class="font-regular font-md">Pemesanan Tiket Pesawat dan Kapal</p>
 			</div>
 		</div>
 		<div class="section p-relative">	
 			<div class="col-md-12 bg-white font-black">
-				<?php echo form_open(base_url('search/searchPesawat'), 'class="form-inline col-ce"'); ?>
-				<!-- <form class="form-inline col-ce" method="post" action="list.html"> -->
+				<?php echo form_open(base_url('search/result'), 'class="form-inline col-ce"'); ?>
 					<select name="kota_asal" class="form-control input-lg">
 						<option>Pilih Kota Asal</option>
-						<option>Jakarta</option>
-						<option>Bandung</option>
-						<option>Kediri</option>
-						<option>Malang</option>
-						<option>Pasuruan</option>
-						<option>Probolinggo</option>
-						<option>Surabaya</option>
+						<?php
+							foreach($all as $row) {
+								echo '<option>'.$row->keberangkatan.'</option>';
+							}
+						?>
 					</select>
 					<select name="kota_tujuan" class="form-control input-lg">
 						<option>Pilih Kota Tujuan</option>
-						<option>Jakarta</option>
-						<option>Bandung</option>
-						<option>Kediri</option>
-						<option>Malang</option>
-						<option>Pasuruan</option>
-						<option>Probolinggo</option>
-						<option>Surabaya</option>
+						<?php
+							foreach($all as $row) {
+								echo '<option>'.$row->tujuan.'</option>';
+							}
+						?>
 					</select>
-					<select name="" class="form-control input-lg">
+					<select name="jam_keberangkatan" class="form-control input-lg">
 						<option>Jam Keberangkatan</option>
-						<option>Jakarta</option>
-						<option>Malang</option>
-						<option>Kediri</option>
-						<option>Malang</option>
-						<option>Pasuruan</option>
-						<option>Probolinggo</option>
-						<option>Surabaya</option>
+						<?php
+							foreach($all as $row) {
+								echo '<option>'.$row->jam_keberangkatan.'</option>';
+							}
+						?>
 					</select>
 					<input type="submit" value="Cari Penerbangan" class="btn bg-purple btn-lg">
-				<!-- </form> -->
 				<?php echo form_close(); ?>
 			</div>
 			<?php 
@@ -97,9 +86,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- HEADER END -->
-
-	<!-- CITY -->
+	
 	<div class="row" id="city">
 		<div class="section">
 			<div class="col-md-12 text-center">
@@ -143,8 +130,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- CITY END -->
-	<!-- RENT YOUR PROPERTIES -->
+	
 	<div class="row bg-img" id="rentyour">
 		<div class="section font-white">
 			<div class="col-md-9">
@@ -154,8 +140,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- RENT YOUR PROPERTIES END-->
-
+	
 	<div class="row bg-white" id="subscribe">
 		<div class="section section-p">
 			<div class="section-c">
@@ -177,36 +162,14 @@
 			</div>
 		</div>
 	</div>
-	
-	<!-- FOOTER -->
+
 	<?php $this->load->view('layout/footer'); ?>
-	<!-- FOOTER END -->
+
 </div>
-<!-- MAIN CONTENT END -->
 
-<!-- LOGIN MODAL -->
-<form class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header bg-purple text-white"> 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title" id="myModalLabel"><i class="fa fa-user"></i> Login</h3>
-      </div>
-      <div class="modal-body">
-        <input type="text" name="search_keyword" class="form-control" placeholder="Username" autofocus=""><br>
-        <input type="password" name="search_keyword" class="form-control" placeholder="Password" autofocus=""><br>
-        <input type="submit" class="btn btn-block bg-purple" value="LOGIN" name=""><br>
-        <center>OR</center><br>
-        <button class="btn btn-default btn-block"><i class="fa fa-google font-purple-darken"></i> &nbsp; Sign In with Google</button>
-      </div>
-    </div>
-  </div>
-</form>
-<!-- LOGIN MODAL END -->
+<?php $this->load->view('auth/login'); ?>
 
-<!-- BACK TO TOP -->
 	<a href="#header" id="backtotop" class="bg-purple"><i class="fa fa-chevron-up fa-2x"></i></a>
-<!-- BACK TO TOP END -->
 
 <?php $this->load->view('layout/js'); ?>
 </body>

@@ -9,13 +9,10 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <table>
-        <?php 
-            foreach($pesawat as $row) {
-                echo '<td>'.$row->nama_pesawat.'</td>';
-                echo '<td>'.$row->keberangkatan.'</td>';
-            }
-        ?>
-    </table>
+    <?php
+        foreach($query as $row) {
+            echo '<p>'.$row->nama_pesawat.'</p>';
+        }
+    ?>
 </body>
 </html>
