@@ -90,6 +90,16 @@
                 <?php
                 }
                 ?>
+                <div class="pt-inner2">
+                    <div class="row row-set">
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-danger">Cancel</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-success">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
