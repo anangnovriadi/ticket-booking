@@ -15,9 +15,11 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="section" style="margin-bottom: 10%;">
+    <div class="section" style="margin-bottom: 8%;">
         <div class="mt-inner">
-            
+            <?php
+                foreach($query as $row) {
+            ?>
             <div class="pt-inner2">
                 <div class="row">
                     <div class="col-md-6">
@@ -29,15 +31,27 @@
                                 <div class="bag-t-details">
                                     <div class="bag-c-details">
                                         <p class="left-c"><span class="badge">Nama Pesawat</span></a></p>
-                                        <p class="left-a left-c"><span class="badge">Batik Air</span></a></p>
+                                        <p class="left-a left-c"><span class="badge"><?php echo $row->nama_pesawat ?></span></a></p>
                                     </div>
                                     <div class="bag-c-details">
                                         <p class="left-c"><span class="badge">Keberangkatan</span></a></p>
-                                        <p class="left-a left-c"><span class="badge">Malang</span></a></p>
+                                        <p class="left-a left-c"><span class="badge"><?php echo $row->keberangkatan ?></span></a></p>
                                     </div>
                                     <div class="bag-c-details">
                                         <p class="left-c"><span class="badge">Tujuan</span></a></p>
-                                        <p class="left-a left-c"><span class="badge">Surabaya</span></a></p>
+                                        <p class="left-a left-c"><span class="badge"><?php echo $row->tujuan ?></span></a></p>
+                                    </div>
+                                    <div class="bag-c-details">
+                                        <p class="left-c"><span class="badge">Jam Keberangkatan</span></a></p>
+                                        <p class="left-a left-c"><span class="badge"><?php echo $row->jam_keberangkatan ?></span></a></p>
+                                    </div>
+                                    <div class="bag-c-details">
+                                        <p class="left-c"><span class="badge">Jam Tiba</span></a></p>
+                                        <p class="left-a left-c"><span class="badge"><?php echo $row->jam_tiba ?></span></a></p>
+                                    </div>
+                                    <div class="bag-c-details">
+                                        <p class="left-c"><span class="badge">Kelas Penerbangan</span></a></p>
+                                        <p class="left-a left-c"><span class="badge"><?php echo $row->kelas_penerbangan ?></span></a></p>
                                     </div>
                                 </div>
                             </div>
@@ -53,31 +67,29 @@
                                     <div class="bag-c-details">
                                         <p class="left-c"><span class="badge badge-a">Pilih Jumlah Penumpang</span></a></p>
                                         <p class="left-a left-c">
-                                            <select class="form-control">
-                                                <option>Jumlah Penumpang</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                            </select>
+                                            <input type="number" style="text-align: center;float: right;width: 50%;" id="jumlahPen" value="0" onkeyup="hitung()" class="form-control">
                                         </p>
                                     </div>
                                     <div style="padding-top: 14px;" class="bag-c-details">
                                         <p class="left-c"><span class="bold">Harga</span></a></p>
-                                        <p class="left-a left-c"><span class="bold">Rp.100.000</span></a></p>
+                                        <p class="left-a left-c"><input type="text" class="input-trans" value="<?php echo $row->harga ?>" onkeyup="hitung()" id="harga"></a></p>
                                     </div>
                                     <div class="bag-c-details">
                                         <p class="left-c"><span class="bold">Jumlah Penumpang</span></a></p>
-                                        <p class="left-a left-c"><span class="bold">2</span></a></p>
+                                        <p class="left-a left-c"><input type="text" class="input-trans" id="jumlahPenTxt" value="0"></input></a></p>
                                     </div>
                                     <div class="bag-c-details bag-tot-d">
                                         <p class="left-c"><span class="bold">Total</span></a></p>
-                                        <p class="left-a left-c"><span class="bold">Rp.200.000</span></a></p>
+                                        <p class="left-a left-c"><input class="bold input-trans" value="0" id="totalHarga"></a></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <?php
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -91,5 +103,15 @@
 	<a href="#header" id="backtotop" class="bg-purple"><i class="fa fa-chevron-up fa-2x"></i></a>
 
 <?php $this->load->view('layout/js'); ?>
+<script>
+    function hitung() {
+        var harga = $('#harga').val();
+        var jumlahPen = $('#jumlahPen').val();
+        var total = harga * jumlahPen;
+
+        $('#jumlahPenTxt').val(jumlahPen);
+        $('#totalHarga').val(total);
+    }
+</script>
 </body>
 </html>
