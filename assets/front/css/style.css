@@ -530,6 +530,11 @@ a.input-group-addon {
 	text-align: right;
 }
 
+.input-trans {
+	border: none;
+	text-align: right;
+}
+
 .badge-a {
 	background: #337ab7 !important;
     padding: 11px !important;

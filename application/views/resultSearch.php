@@ -15,9 +15,12 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="section" style="margin-bottom: 10%;">
+    <div class="section" style="margin-bottom: 8%;">
         <div class="mt-inner">
             <div class="pt-inner2">
+                <?php 
+                    if($pesawat != null) {
+                ?>
                 <div class="row">
                     <?php
                         foreach($pesawat as $row) {
@@ -42,6 +45,14 @@
                     </div>
                     <?php
                         }
+                    } 
+                    else {
+                    ?>
+                    <div class="row">
+                        <h3 class="bold" style="text-align: center;">No Result</h3>
+                    </div>
+                    <?php 
+                    }
                     ?>
                 </div>
 
