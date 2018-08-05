@@ -6,7 +6,7 @@
 			<div class="col-md-10 col-xs-12 font-sm font-medium text-right">
 				<ul>
 					<li class="hvr-underline-from-left"><a href="<?php echo base_url('/'); ?>">HOME</a></li>
-					<li class="hvr-underline-from-left"><a href="#">DESTINASI</a></li>
+					<li class="hvr-underline-from-left"><a href="<?php echo base_url('/destinasi'); ?>">DESTINASI</a></li>
 					<li class="hvr-underline-from-left"><a href="#">ABOUT US</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#login" class="btn bg-purple btn-sm">LOGIN</a></li>
 					<li><a href="#" class="btn btn-default btn-sm">REGISTER</a></li>

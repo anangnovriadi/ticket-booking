@@ -118,15 +118,8 @@
 					<a href="#" class="btn bg-purple font-medium"><i class="fa fa-caret-right"></i> PROBOLINGGO</a>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="city-panel bg-img" style="background-image: url(assets/front/images/city/kediri.jpg);">
-					<a href="#" class="btn bg-purple font-medium"><i class="fa fa-caret-right"></i> KEDIRI</a>
-				</div>
-			</div>
-			<div class="col-md-8">
-				<div class="city-panel bg-img" style="background-image: url(assets/front/images/city/batu.jpg);">
-					<a href="#" class="btn bg-purple font-medium"><i class="fa fa-caret-right"></i> BATU</a>
-				</div>
+			<div class="col-md-12 mt-inner txt-center">
+				<a href="<?php echo base_url('/destinasi'); ?>"><span class="badge badge-a">See more</span></a>
 			</div>
 		</div>
 	</div>
