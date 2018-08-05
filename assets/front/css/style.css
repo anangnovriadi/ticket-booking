@@ -441,8 +441,16 @@ a.input-group-addon {
 	text-align: right;
 }
 
+.txt-center {
+	text-align: center;
+}
+
 .pb-3 {
 	padding-bottom: 3% !important;
+}
+
+.p-0 {
+	padding: 0 !important;
 }
 
 .p-relative {
