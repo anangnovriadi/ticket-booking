@@ -541,4 +541,10 @@ a.input-group-addon {
     border-radius: 3px !important;
 }
 
+.row-set {
+	padding-left: 40% !important;
+	padding-right: 40% !important;
+	text-align: center;
+}
+
 /* End Custom */
