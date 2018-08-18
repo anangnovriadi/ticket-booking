@@ -11,6 +11,10 @@ class Login extends CI_Controller
 
     public function index() 
     {
+        if($this->session->has_userdata('hak_akses') == 'admin') {
+			redirect(base_url('admin/'));
+        }
+        
         $this->load->view('auth/login');
     }
 
