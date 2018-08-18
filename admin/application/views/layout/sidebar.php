@@ -22,6 +22,11 @@
                     <li><a href="<?php echo base_url('admin/kapal/add'); ?>"><i class="fa fa-angle-right"></i> Input Data</a></li>
                 </ul>
             </li>
+            <li class="treeview"> <a href="#"><i class="fa fa-user"></i> <span>Pelanggan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-angle-right"></i> Data Pelanggan</a></li>
+                </ul>
+            </li>
             <li class="treeview"> <a href="#"><i class="fa fa-briefcase"></i> <span>Data Pemesanan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
                 <ul class="treeview-menu">
                     <li><a href="dataPemesanan/dataPemesananPesawat.php"><i class="fa fa-angle-right"></i> Pesawat</a></li>
