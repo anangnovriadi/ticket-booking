@@ -64,8 +64,6 @@
 	
 </div>
 
-<?php $this->load->view('auth/login'); ?>
-
 	<a href="#header" id="backtotop" class="bg-purple"><i class="fa fa-chevron-up fa-2x"></i></a>
 
 <?php $this->load->view('layout/js'); ?>
