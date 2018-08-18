@@ -93,10 +93,10 @@
                 <div class="pt-inner2">
                     <div class="row row-set">
                         <div class="col-md-6">
-                            <button type="submit" class="btn btn-danger">Cancel</button>
+                            <a href="<?php echo base_url('/') ?>" class="btn btn-danger white">Cancel</a>
                         </div>
                         <div class="col-md-6">
-                            <button type="submit" class="btn btn-success">Pesan Sekarang</button>
+                            <a href="<?php echo base_url('/pembayaran') ?>" class="btn btn-success white">Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>

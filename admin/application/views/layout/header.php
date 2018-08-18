@@ -6,7 +6,7 @@
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"> <span class="sr-only">Toggle navigation</span> </a>
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-                <li class="dropdown user user-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?php echo base_url('assets/admin/img/img1.jpg'); ?>" class="user-image" alt="User Image" /> <span class="hidden-xs">Florence Douglas</span> </a>
+                <li class="dropdown user user-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?php echo base_url('assets/admin/img/img1.jpg'); ?>" class="user-image" alt="User Image" /> <span class="hidden-xs">Administrator</span> </a>
                 <ul class="dropdown-menu">
                     <li><a href="#"><i class="icon-gears"></i> Account Setting</a></li>
                     <li role="separator" class="divider"></li>

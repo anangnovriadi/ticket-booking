@@ -555,4 +555,8 @@ a.input-group-addon {
 	text-align: center;
 }
 
+.white {
+	color: white !important;
+}
+
 /* End Custom */
