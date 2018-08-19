@@ -559,4 +559,17 @@ a.input-group-addon {
 	color: white !important;
 }
 
+.md-cs {
+	width: 40%;
+	margin: auto;
+}
+
+.reg {
+	text-align: center;
+}
+
+.reg a {
+	color: #6a1b9a !important;
+}
+
 /* End Custom */
