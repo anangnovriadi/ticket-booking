@@ -13,6 +13,10 @@ class Transaksi extends CI_Controller {
 
         $this->load->view('transaksi', $data);
     }
+
+    public function insertTiket() {
+        
+    }
 }
 
 ?>

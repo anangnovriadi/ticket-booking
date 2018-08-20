@@ -4,6 +4,7 @@
     <?php $this->load->view('layout/meta'); ?>
 	<title>Esthana - House Rent</title>
 	<?php $this->load->view('layout/css'); ?>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
 </head>
 <body>
 
@@ -20,36 +21,47 @@
 		<div class="section p-relative">	
 			<div class="col-md-12 bg-white font-black">
 				<?php echo form_open(base_url('search/result'), 'class="form-inline col-ce"'); ?>
-					<select name="kota_asal" class="form-control input-lg">
-						<option>Pilih Kota Asal</option>
-						<?php
-							foreach($all as $row) {
-								echo '<option>'.$row->keberangkatan.'</option>';
-							}
-						?>
-					</select>
-					<select name="kota_tujuan" class="form-control input-lg">
-						<option>Pilih Kota Tujuan</option>
-						<?php
-							foreach($all as $row) {
-								echo '<option>'.$row->tujuan.'</option>';
-							}
-						?>
-					</select>
-					<select name="jam_keberangkatan" class="form-control input-lg">
+					<div class="col-md-3">
+						<select name="kota_asal" class="form-control input-cus">
+							<option>Pilih Kota Asal</option>
+							<?php
+								foreach($all as $row) {
+									echo '<option>'.$row->keberangkatan.'</option>';
+								}
+							?>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<select name="kota_tujuan" class="form-control input-cus">
+							<option>Pilih Kota Tujuan</option>
+							<?php
+								foreach($all as $row) {
+									echo '<option>'.$row->tujuan.'</option>';
+								}
+							?>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<input class="form-control input-cus" type="text" id="datepicker">
+					</div>
+
+					<!-- <select name="jam_keberangkatan" class="form-control input-lg">
 						<option>Jam Keberangkatan</option>
 						<?php
 							foreach($all as $row) {
 								echo '<option>'.$row->jam_keberangkatan.'</option>';
 							}
 						?>
-					</select>
-					<input type="submit" value="Cari Penerbangan" class="btn bg-purple btn-lg">
+					</select> -->
+					<div class="col-md-3">
+						<input type="submit" value="Cari Penerbangan" class="btn bg-purple btn-lg">	
+					</div>
 				<?php echo form_close(); ?>
 			</div>
 			<?php 
 				
 			?>
+			
 		</div>
 		<div class="section p-relative">	
 			<div class="col-md-12 bg-white cus-kapal font-black">
@@ -160,9 +172,12 @@
 
 </div>
 
-
 	<a href="#header" id="backtotop" class="bg-purple"><i class="fa fa-chevron-up fa-2x"></i></a>
-
-<?php $this->load->view('layout/js'); ?>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+	<script>
+		$('#datepicker').datepicker();
+	</script>
+	<?php $this->load->view('layout/js'); ?>
 </body>
 </html>
