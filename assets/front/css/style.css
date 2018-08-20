@@ -497,6 +497,11 @@ a.input-group-addon {
 	padding-right: 15%;
 }
 
+.input-cus {
+	width: 100% !important;
+	height: 45px !important;
+}
+
 .box-shadow-bt {
 	box-shadow: 0 0 30px rgba(7, 51, 84, 0.17);
 }

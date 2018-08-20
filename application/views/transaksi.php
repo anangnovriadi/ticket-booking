@@ -30,6 +30,7 @@
                                 </div>
                                 <div class="bag-t-details">
                                     <div class="bag-c-details">
+                                        <input type="hidden" value="<?php echo $row->id; ?>" />
                                         <p class="left-c"><span class="badge">Nama Pesawat</span></a></p>
                                         <p class="left-a left-c"><span class="badge"><?php echo $row->nama_pesawat ?></span></a></p>
                                     </div>
