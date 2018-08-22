@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php $this->load->view('layout/meta'); ?>
-	<title>Esthana - House Rent</title>
+	<title>Pembayaran - Reni Jaya Travel</title>
 	<?php $this->load->view('layout/css'); ?>
 </head>
 <body>

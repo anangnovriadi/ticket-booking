@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php $this->load->view('layout/meta'); ?>
-	<title>Esthana - House Rent</title>
+	<title>Home - Reni Jaya Travel</title>
 	<?php $this->load->view('layout/css'); ?>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
 </head>
@@ -42,17 +42,8 @@
 						</select>
 					</div>
 					<div class="col-md-3">
-						<input class="form-control input-cus" type="text" id="datepicker">
+						<input class="form-control input-cus" name="tgl_keberangkatan" type="text" id="datepicker">
 					</div>
-
-					<!-- <select name="jam_keberangkatan" class="form-control input-lg">
-						<option>Jam Keberangkatan</option>
-						<?php
-							foreach($all as $row) {
-								echo '<option>'.$row->jam_keberangkatan.'</option>';
-							}
-						?>
-					</select> -->
 					<div class="col-md-3">
 						<input type="submit" value="Cari Penerbangan" class="btn bg-purple btn-lg">	
 					</div>
@@ -102,8 +93,8 @@
 	<div class="row" id="city">
 		<div class="section">
 			<div class="col-md-12 text-center">
-				<h3 class="font-purple font-bold font-lg">Available in 7 Cities</h3>
-				<p class="font-medium font-md">Volutpat blandit aliquam etiam erat velit scelerisque.</p>
+				<h3 class="font-purple font-bold font-lg">Destinasi Populer</h3>
+				<p class="font-medium font-md">Berbagai destinasi menarik yang dapat dikunjungi.</p>
 			</div>
 			<div class="col-md-8">
 				<div class="city-panel bg-img" style="background-image: url(assets/front/images/city/surabaya.jpg);">
@@ -177,7 +168,7 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 	<script>
 		$('#datepicker').datepicker({
-			format: 'mm-dd-yyyy',
+			format: 'yyyy-mm-dd',
 			startDate: '+1d',
 			todayHighlight: true
 		});

@@ -11,11 +11,10 @@ class Search extends CI_Controller {
     public function result() {
         $asal = $this->input->post('kota_asal');
         $tujuan = $this->input->post('kota_tujuan');
+        $tgl_keberangkatan = $this->input->post('tgl_keberangkatan');
         $data['pesawat'] = $this->mdlsearch->getPesawat($asal, $tujuan);
-        $sessionAll = array(
-            'asal' => $asal,
-            'tujuan' => $tujuan
-        );
+        
+        $this->session->set_userdata('tgl', $tgl_keberangkatan);
         $this->load->view('resultSearch', $data);
     }
 
