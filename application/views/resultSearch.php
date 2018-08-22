@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php $this->load->view('layout/meta'); ?>
-	<title>Esthana - House Rent</title>
+	<title>Tiket Pesawat - Reni Jaya Travel</title>
 	<?php $this->load->view('layout/css'); ?>
 </head>
 <body>
@@ -32,6 +32,7 @@
                                 <div style="display: flex;padding-bottom: 6px;">
                                     <input type="hidden" value="<?php echo $row->id; ?>">
                                     <h4 style="width: 100%;"><?php echo $row->nama_pesawat ?></h4>
+                                    <input type="hidden" name="tgl_keberangkatan" value="<?php echo $this->session->userdata('tgl'); ?>" />
                                     <h4 style="float: right;text-align: right;width: 100%;">Rp. <?php echo $row->harga; ?></h4>
                                 </div>
                                 <?php 
