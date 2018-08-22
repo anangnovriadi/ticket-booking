@@ -176,7 +176,11 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 	<script>
-		$('#datepicker').datepicker();
+		$('#datepicker').datepicker({
+			format: 'mm-dd-yyyy',
+			startDate: '+1d',
+			todayHighlight: true
+		});
 	</script>
 	<?php $this->load->view('layout/js'); ?>
 </body>
