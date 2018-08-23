@@ -42,50 +42,44 @@
 						</select>
 					</div>
 					<div class="col-md-3">
-						<input class="form-control input-cus" name="tgl_keberangkatan" type="text" id="datepicker">
+						<input class="form-control input-cus" placeholder="Pilih Tanggal" name="tgl_keberangkatan" type="text" id="datepicker">
 					</div>
 					<div class="col-md-3">
 						<input type="submit" value="Cari Penerbangan" class="btn bg-purple btn-lg">	
 					</div>
 				<?php echo form_close(); ?>
 			</div>
-			<?php 
-				
-			?>
-			
 		</div>
 		<div class="section p-relative">	
-			<div class="col-md-12 bg-white cus-kapal font-black">
-				<form class="form-inline col-ce" method="post" action="list.html">
-					<select class="form-control input-lg">
-						<option>Pelabuhan Asal</option>
-						<option>House</option>
-						<option>Apartment</option>
-						<option>Villa</option>
-						<option>Other</option>
-					</select>
-					<select class="form-control input-lg">
-						<option>Pelabuhan Tujuan</option>
-						<option>Batu</option>
-						<option>Blitar</option>
-						<option>Kediri</option>
-						<option>Malang</option>
-						<option>Pasuruan</option>
-						<option>Probolinggo</option>
-						<option>Surabaya</option>
-					</select>
-					<select class="form-control input-lg">
-						<option>Jam Keberangkatan</option>
-						<option>Batu</option>
-						<option>Blitar</option>
-						<option>Kediri</option>
-						<option>Malang</option>
-						<option>Pasuruan</option>
-						<option>Probolinggo</option>
-						<option>Surabaya</option>
-					</select>
-					<input type="submit" value="Cari Kapal" class="btn bg-purple btn-lg">
-				</form>
+			<div class="col-md-12 bg-white mt-1 font-black">
+				<?php echo form_open(base_url('search/result'), 'class="form-inline col-ce"'); ?>
+					<div class="col-md-3">
+						<select name="kota_asal" class="form-control input-cus">
+							<option>Pelabuhan Asal</option>
+							<?php
+								foreach($all as $row) {
+									echo '<option>'.$row->keberangkatan.'</option>';
+								}
+							?>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<select name="kota_tujuan" class="form-control input-cus">
+							<option>Pelabuhan Tujuan</option>
+							<?php
+								foreach($all as $row) {
+									echo '<option>'.$row->tujuan.'</option>';
+								}
+							?>
+						</select>
+					</div>
+					<div class="col-md-3">
+						<input class="form-control input-cus" placeholder="Pilih Tanggal" name="tgl_keberangkatan" type="text" id="datepicker">
+					</div>
+					<div class="col-md-3">
+						<input type="submit" value="Cari Kapal" class="btn bg-purple btn-lg">	
+					</div>
+				<?php echo form_close(); ?>
 			</div>
 		</div>
 	</div>
