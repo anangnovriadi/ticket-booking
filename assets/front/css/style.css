@@ -482,6 +482,10 @@ a.input-group-addon {
 	margin-top: 5%;
 }
 
+.mt-1 {
+	margin-top: 1% !important;
+}
+
 .pt-inner2 {
 	padding-top: 2%;
 }
