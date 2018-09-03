@@ -11,7 +11,7 @@
 
 <div class="back-banner box-shadow-bt">
     <div class="title-all">
-        <h2 class="font-white">Destinasi</h2>   
+        <h2 class="font-white">Destinasi Populer</h2>   
     </div>
 </div>
 <div class="container-fluid">
