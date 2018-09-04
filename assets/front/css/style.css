@@ -585,4 +585,12 @@ a.input-group-addon {
 	padding-bottom: 6px;
 }
 
+.hvr-underline-from-left a, .dropdown-menu button {
+	font-size: 17px;
+}
+
+.log-reg a {
+	font-size: 14px;
+}
+
 /* End Custom */
