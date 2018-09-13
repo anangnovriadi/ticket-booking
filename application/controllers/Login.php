@@ -24,10 +24,12 @@ class Login extends CI_Controller {
             foreach($cek_user->result() as $data) {
                 $sess_data['hak_akses'] = $data->hak_akses;
                 var_dump($data->username);
-                $user = $data->username;
+                $dataId = $data->id;
+                $dataUser = $data->username;
 
                 $this->session->set_userdata($sess_data);
-                $this->session->set_userdata('username', $user);
+                $this->session->set_userdata('username', $dataUser);
+                $this->session->set_userdata('id', $dataId);
 
                 if($this->session->userdata('hak_akses') == 'user') {
                     redirect(base_url('/'));                

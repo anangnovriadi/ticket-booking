@@ -20,6 +20,8 @@
         <div class="mt-inner">
             <?php
                 foreach($query as $row) {
+                    $this->session->set_userdata('nama_pesawat', $row->nama_pesawat);
+                    $this->session->set_userdata('harga', $row->harga);
             ?>
             <div class="pt-inner2">
                 <div class="row">
