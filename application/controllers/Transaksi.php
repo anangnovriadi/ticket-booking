@@ -12,7 +12,7 @@ class Transaksi extends CI_Controller {
         $id_decode = base64_decode(urldecode($id_encode));
         $id = array('id' => $id_decode);
         $data['query'] = $this->db->get_where('tb_pesawat', $id)->result();
-
+        
         $this->load->view('transaksi', $data);
     }
 
@@ -22,9 +22,11 @@ class Transaksi extends CI_Controller {
             $tgl_keberangkatan = $this->input->post('tgl_keberangkatan');
             $jumlah_penumpang = $this->input->post('jumlah_pen');
             $total_harga = $this->input->post('total_harga');
+            $id_user = $this->session->userdata('id');
             
             $dataInsert = array(
                 'id' => '',
+                'id_user' => $id_user,
                 'id_pesawat' => $id_pesawat,
                 'tgl_keberangkatan' => $tgl_keberangkatan,
                 'jumlah_tiket' => $jumlah_penumpang,
@@ -33,6 +35,10 @@ class Transaksi extends CI_Controller {
             );
 
             $this->mdlinserttiket->insert('tb_tiket_pesawat', $dataInsert);
+            $this->session->set_userdata('tgl_keberangkatan', $dataInsert['tgl_keberangkatan']);
+            $this->session->set_userdata('jumlah_tiket', $dataInsert['jumlah_tiket']);
+            $this->session->set_userdata('harga_total', $dataInsert['harga_total']);
+            
             redirect(base_url('/pembayaran'));
         } else {
             redirect(base_url('/login'));
