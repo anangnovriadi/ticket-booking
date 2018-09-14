@@ -52,29 +52,29 @@
 		</div>
 		<div class="section p-relative">	
 			<div class="col-md-12 bg-white mt-1 font-black">
-				<?php echo form_open(base_url('search/result'), 'class="form-inline col-ce"'); ?>
+				<?php echo form_open(base_url('search/resultKapal'), 'class="form-inline col-ce"'); ?>
 					<div class="col-md-3">
-						<select name="kota_asal" class="form-control input-cus">
+						<select name="pelabuhan_asal" class="form-control input-cus">
 							<option>Pelabuhan Asal</option>
 							<?php
-								foreach($all as $row) {
-									echo '<option>'.$row->keberangkatan.'</option>';
+								foreach($allKapal as $row) {
+									echo '<option>'.$row->pelabuhan_asal.'</option>';
 								}
 							?>
 						</select>
 					</div>
 					<div class="col-md-3">
-						<select name="kota_tujuan" class="form-control input-cus">
+						<select name="pelabuhan_tujuan" class="form-control input-cus">
 							<option>Pelabuhan Tujuan</option>
 							<?php
-								foreach($all as $row) {
-									echo '<option>'.$row->tujuan.'</option>';
+								foreach($allKapal as $row) {
+									echo '<option>'.$row->pelabuhan_tujuan.'</option>';
 								}
 							?>
 						</select>
 					</div>
 					<div class="col-md-3">
-						<input class="form-control input-cus" placeholder="Pilih Tanggal" name="tgl_keberangkatan" type="text" id="datepicker">
+						<input class="form-control input-cus" placeholder="Pilih Tanggal" name="tgl_keberangkatan" type="text" id="datepickerKapal">
 					</div>
 					<div class="col-md-3">
 						<input type="submit" value="Cari Kapal" class="btn bg-purple btn-lg">	
@@ -162,6 +162,11 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 	<script>
 		$('#datepicker').datepicker({
+			format: 'yyyy-mm-dd',
+			startDate: '+1d',
+			todayHighlight: true
+		});
+		$('#datepickerKapal').datepicker({
 			format: 'yyyy-mm-dd',
 			startDate: '+1d',
 			todayHighlight: true

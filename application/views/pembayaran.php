@@ -37,7 +37,17 @@
                     <div class="col-md-5">
                         <div class="alert alert-warning" role="alert">
                             <li>
-                                Nama Pesawat : <b><?php print_r($this->session->userdata('nama_pesawat')); ?></b>                            
+                                <?php
+                                    if($this->session->userdata('nama_pesawat')) {
+                                ?>
+                                    Nama Pesawat : <b><?php print_r($this->session->userdata('nama_pesawat')); ?></b>
+                                <?php
+                                    } else if($this->session->userdata('nama_kapal')) {
+                                ?>
+                                    Nama Kapal : <b><?php print_r($this->session->userdata('nama_kapal')); ?></b>  
+                                <?php
+                                    }
+                                ?>
                             </li>
                             <li>
                                 Tanggal Keberangkatan : <b><?php print_r($this->session->userdata('tgl_keberangkatan')); ?></b>                            

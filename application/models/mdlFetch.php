@@ -5,6 +5,10 @@ class MdlFetch extends CI_Model {
     public function getData() {
         return $this->db->get('tb_pesawat')->result();
     }
+
+    public function getDataKapal() {
+        return $this->db->get('tb_kapal')->result();
+    }
 }
 
 ?>

@@ -10,6 +10,15 @@ class MdlSearch extends CI_Model {
 
         return $this->db->get()->result();
     }
+
+    public function getKapal($asal, $tujuan) {
+        $this->db->select('*');
+        $this->db->from('tb_kapal');
+        $this->db->like('pelabuhan_asal', $asal);
+        $this->db->like('pelabuhan_tujuan', $tujuan);
+
+        return $this->db->get()->result();
+    }
 }
 
 ?>
