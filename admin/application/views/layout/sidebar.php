@@ -29,7 +29,7 @@
             </li>
             <li class="treeview"> <a href="#"><i class="fa fa-briefcase"></i> <span>Data Pemesanan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
                 <ul class="treeview-menu">
-                    <li><a href=""><i class="fa fa-angle-right"></i> Pesawat</a></li>
+                    <li><a href="<?php echo base_url('admin/pemesanan/pemesananPesawat'); ?>"><i class="fa fa-angle-right"></i> Pesawat</a></li>
                     <li><a href="<?php echo base_url('admin/pemesanan/pemesananKapal'); ?>"><i class="fa fa-angle-right"></i> Kapal</a></li>
                 </ul>
             </li>

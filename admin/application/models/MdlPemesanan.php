@@ -8,8 +8,18 @@ class MdlPemesanan extends CI_Model
         return $this->db->get($table);
     }
 
+    public function getPemesananPesawat($table)
+    {
+        return $this->db->get($table);
+    }
+
     public function getKapalById($where) {
         $query = $this->db->query("SELECT * FROM tb_kapal WHERE id = '$where'");
+        return $query;
+    }
+
+    public function getPesawatById($where) {
+        $query = $this->db->query("SELECT * FROM tb_pesawat WHERE id = '$where'");
         return $query;
     }
 
