@@ -18,6 +18,16 @@ class Search extends CI_Controller {
         $this->load->view('resultSearch', $data);
     }
 
+    public function resultKapal() {
+        $pelabuhan_asal = $this->input->post('pelabuhan_asal');
+        $pelabuhan_tujuan = $this->input->post('pelabuhan_tujuan');
+        $tgl_keberangkatan = $this->input->post('tgl_keberangkatan');
+        $data['kapal'] = $this->mdlsearch->getKapal($pelabuhan_asal, $pelabuhan_tujuan);
+
+        $this->session->set_userdata('tgl', $tgl_keberangkatan);
+        $this->load->view('resultSearchKapal', $data);
+    }
+
     public function viewSearch() {
         $this->load->view('resultSearch');
     }
