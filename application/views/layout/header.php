@@ -28,7 +28,7 @@
 					</li>
 					<?php } else { ?>
 						<li class="log-reg"><a href="<?php echo base_url('/login'); ?>" class="btn bg-purple btn-sm">Login</a></li>
-						<li class="log-reg"><a href="#" class="btn btn-default btn-sm">Register</a></li>
+						<li class="log-reg"><a href="<?php echo base_url('/register'); ?>" class="btn btn-default btn-sm">Register</a></li>
 					<?php } ?>
 				</ul>
 			</div>

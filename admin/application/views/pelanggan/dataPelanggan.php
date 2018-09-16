@@ -29,8 +29,11 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Username</th>
                                     <th>Nama Pelanggan</th>
                                     <th>Email</th>
+                                    <th>No Telpon</th>
+                                    <th>Alamat</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -42,7 +45,10 @@
                                     <tr>
                                         <td><?php echo $no; ?></td>
                                         <td><?php echo $rows->username; ?></td>
+                                        <td><?php echo $rows->nama_lengkap; ?></td>
                                         <td><?php echo $rows->email; ?></td>
+                                        <td><?php echo $rows->no_telp; ?></td>
+                                        <td><?php echo $rows->alamat; ?></td>
                                     </tr>
                                 <?php
                                     $no++;
