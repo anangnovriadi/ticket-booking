@@ -23,7 +23,7 @@ class Login extends CI_Controller {
         {
             foreach($cek_user->result() as $data) {
                 $sess_data['hak_akses'] = $data->hak_akses;
-                var_dump($data->username);
+                // var_dump($data->username);
                 $dataId = $data->id;
                 $dataUser = $data->username;
 
@@ -32,16 +32,17 @@ class Login extends CI_Controller {
                 $this->session->set_userdata('id', $dataId);
 
                 if($this->session->userdata('hak_akses') == 'user') {
+                    $this->session->set_flashdata('message_success', 'Success Login');
                     redirect(base_url('/'));                
                 } else {
-                    $this->session->set_flashdata('message', 'Username and password not found');
+                    $this->session->set_flashdata('message_err', 'Username and password not found');
                     return redirect($this->agent->referrer());
                 }
             }
         }
         else 
         {
-            $this->session->set_flashdata('message', 'Wrong username and password');
+            $this->session->set_flashdata('message_err', 'Wrong username and password');
             redirect($this->agent->referrer());
         }
     }
