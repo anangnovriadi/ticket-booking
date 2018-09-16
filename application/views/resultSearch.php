@@ -27,7 +27,7 @@
                     ?>
                     <div class="col-md-4">
                         <div class="thumbnail">
-                            <img src="http://via.placeholder.com/300x120" class="img-responsive">
+                            <img src="<?php echo base_url('assets/front/images/plane.png'); ?>" class="img-auto">
                             <div class="caption">
                                 <div style="display: flex;padding-bottom: 6px;">
                                     <input type="hidden" value="<?php echo $row->id; ?>">
