@@ -26,7 +26,7 @@
                                 <input type="text" name="no_telp" class="form-control" placeholder="No Telp" autofocus=""><br>
                                 <textarea type="text" name="alamat" class="form-control" placeholder="Alamat" autofocus=""></textarea><br>
                                 <input type="password" name="password" class="form-control" placeholder="Password" autofocus=""><br>
-                                <input type="submit" class="btn btn-block bg-purple" value="LOGIN"><br>
+                                <input type="submit" class="btn btn-block bg-purple" value="REGISTER"><br>
                                 <div class="reg">
                                 <p>Sudah punya akun? Login <a href="<?php echo base_url('/login'); ?>">disini</a></p>     
                                 </div>

@@ -25,7 +25,7 @@
 						<select name="kota_asal" class="form-control input-cus">
 							<option>Pilih Kota Asal</option>
 							<?php
-								foreach($all as $row) {
+								foreach($allAsal as $row) {
 									echo '<option>'.$row->keberangkatan.'</option>';
 								}
 							?>
@@ -35,7 +35,7 @@
 						<select name="kota_tujuan" class="form-control input-cus">
 							<option>Pilih Kota Tujuan</option>
 							<?php
-								foreach($all as $row) {
+								foreach($allTujuan as $row) {
 									echo '<option>'.$row->tujuan.'</option>';
 								}
 							?>
@@ -57,7 +57,7 @@
 						<select name="pelabuhan_asal" class="form-control input-cus">
 							<option>Pelabuhan Asal</option>
 							<?php
-								foreach($allKapal as $row) {
+								foreach($allKapalAsal as $row) {
 									echo '<option>'.$row->pelabuhan_asal.'</option>';
 								}
 							?>
@@ -67,7 +67,7 @@
 						<select name="pelabuhan_tujuan" class="form-control input-cus">
 							<option>Pelabuhan Tujuan</option>
 							<?php
-								foreach($allKapal as $row) {
+								foreach($allKapalTujuan as $row) {
 									echo '<option>'.$row->pelabuhan_tujuan.'</option>';
 								}
 							?>
