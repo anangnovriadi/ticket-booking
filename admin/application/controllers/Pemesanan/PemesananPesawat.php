@@ -39,7 +39,6 @@ class PemesananPesawat extends CI_Controller {
         $bayar = $this->input->post('bayar');
 
         $dataUpdate = array(
-            'id' => '',
             'bayar' => $bayar,
         );
         
