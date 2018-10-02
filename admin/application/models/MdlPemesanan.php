@@ -13,6 +13,24 @@ class MdlPemesanan extends CI_Model
         return $this->db->get($table);
     }
 
+    public function getAllPemesananPesawat() 
+    {
+        $query = 'SELECT * FROM tb_tiket_pesawat INNER JOIN tb_users 
+                    ON tb_tiket_pesawat.`id_user` = tb_users.`id` 
+                        INNER JOIN tb_pesawat ON tb_tiket_pesawat.`id_pesawat` = tb_pesawat.`id`';
+
+        return $this->db->query($query);
+    }
+
+    public function getAllPemesananKapal() 
+    {
+        $query = 'SELECT * FROM tb_tiket_kapal INNER JOIN tb_users 
+                    ON tb_tiket_kapal.`id_user` = tb_users.`id` 
+                        INNER JOIN tb_kapal ON tb_tiket_kapal.`id_kapal` = tb_kapal.`id`';
+
+        return $this->db->query($query);
+    }
+
     public function getKapalById($where) {
         $query = $this->db->query("SELECT * FROM tb_kapal WHERE id = '$where'");
         return $query;
