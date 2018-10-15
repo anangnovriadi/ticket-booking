@@ -62,7 +62,9 @@
                                 Harga Total : <b>Rp. <span class="format"><?php print_r($this->session->userdata('harga_total')); ?></span></b>                            
                             </li>
                         </div>
-                        
+                        <div class="alert alert-warning">
+                            <p><b>Please, Check your Email.</b></p>
+                        </div>
                     </div>
                 </div>
                 
