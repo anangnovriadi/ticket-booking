@@ -9,6 +9,10 @@ class Laporan extends CI_Controller
         $this->load->model('mdlpemesanan');
         include APPPATH.'third_party/PHPExcel/PHPExcel.php';
         $this->load->helper('url');
+
+        if($this->session->has_userdata('hak_akses') != 'admin') {
+			redirect(base_url('admin/login'));
+		}
     }
 
     public function index() 
