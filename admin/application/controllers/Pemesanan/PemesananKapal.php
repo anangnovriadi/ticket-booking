@@ -5,6 +5,10 @@ class PemesananKapal extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('mdlpemesanan');
+
+        if($this->session->has_userdata('hak_akses') != 'admin') {
+			redirect(base_url('admin/login'));
+		}
     }
 
     public function index() {

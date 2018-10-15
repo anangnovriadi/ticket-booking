@@ -7,6 +7,10 @@ class Pembayaran extends CI_Controller
     {
         parent::__construct();
         $this->load->model('mdlpembayaran');
+
+        if($this->session->has_userdata('hak_akses') != 'admin') {
+			redirect(base_url('admin/login'));
+		}
     }
 
     public function index()
