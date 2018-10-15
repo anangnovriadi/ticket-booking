@@ -58,7 +58,7 @@ class Laporan extends CI_Controller
         $kapal = $this->mdlpemesanan->getAllPemesananKapal($tgl_pemesanan)->result();
         
         $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pemesanan Tiket Kapal Terakhir");
-        $excel->getActiveSheet()->mergeCells('A1:F1');
+        $excel->getActiveSheet()->mergeCells('A1:H1');
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setBold(TRUE);
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setSize(15);
         $excel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
@@ -69,6 +69,8 @@ class Laporan extends CI_Controller
         $excel->setActiveSheetIndex(0)->setCellValue('D3', 'Keberangkatan');
         $excel->setActiveSheetIndex(0)->setCellValue('E3', 'Tujuan');
         $excel->setActiveSheetIndex(0)->setCellValue('F3', 'Tanggal Keberangkatan');
+        $excel->setActiveSheetIndex(0)->setCellValue('G3', 'Harga Total');
+        $excel->setActiveSheetIndex(0)->setCellValue('H3', 'Total Pendapatan Pada Tanggal '.$tgl_keberangkatan);
 
         $excel->getActiveSheet()->getStyle('A3')->applyFromArray($style_col);
         $excel->getActiveSheet()->getStyle('B3')->applyFromArray($style_col);
@@ -76,9 +78,12 @@ class Laporan extends CI_Controller
         $excel->getActiveSheet()->getStyle('D3')->applyFromArray($style_col);
         $excel->getActiveSheet()->getStyle('E3')->applyFromArray($style_col);
         $excel->getActiveSheet()->getStyle('F3')->applyFromArray($style_col);
+        $excel->getActiveSheet()->getStyle('G3')->applyFromArray($style_col);
+        $excel->getActiveSheet()->getStyle('H3')->applyFromArray($style_col);
 
         $no = 1;
         $numrow = 4;
+        $totalPendapatan = 0;
         foreach($kapal as $data){
             $excel->setActiveSheetIndex(0)->setCellValue('A'.$numrow, $no);
             $excel->setActiveSheetIndex(0)->setCellValue('B'.$numrow, $data->nama_kapal);
@@ -96,7 +101,10 @@ class Laporan extends CI_Controller
       
             $no++; // Tambah 1 setiap kali looping
             $numrow++; // Tambah 1 setiap kali looping
+            $totalPendapatan += $data->harga_total;
         }
+        $excel->setActiveSheetIndex(0)->setCellValue('H4', $totalPendapatan);
+        $excel->getActiveSheet()->getStyle('H4')->applyFromArray($style_row);
 
         $excel->getActiveSheet()->getColumnDimension('A')->setWidth(5); // Set width kolom A
         $excel->getActiveSheet()->getColumnDimension('B')->setWidth(15); // Set width kolom B
@@ -104,6 +112,8 @@ class Laporan extends CI_Controller
         $excel->getActiveSheet()->getColumnDimension('D')->setWidth(20); // Set width kolom D
         $excel->getActiveSheet()->getColumnDimension('E')->setWidth(30); // Set width kolom E
         $excel->getActiveSheet()->getColumnDimension('F')->setWidth(35); // Set width kolom F
+        $excel->getActiveSheet()->getColumnDimension('G')->setWidth(25); // Set width kolom G
+        $excel->getActiveSheet()->getColumnDimension('H')->setWidth(40); // Set width kolom H
     
     // Set height semua kolom menjadi auto (mengikuti height isi dari kolommnya, jadi otomatis)
         $excel->getActiveSheet()->getDefaultRowDimension()->setRowHeight(-1);
@@ -158,7 +168,7 @@ class Laporan extends CI_Controller
         $pesawat = $this->mdlpemesanan->getAllPemesananPesawat($tgl_keberangkatan)->result();
         
         $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pemesanan Tiket Pesawat Terakhir");
-        $excel->getActiveSheet()->mergeCells('A1:F1');
+        $excel->getActiveSheet()->mergeCells('A1:H1');
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setBold(TRUE);
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setSize(15);
         $excel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
@@ -169,6 +179,8 @@ class Laporan extends CI_Controller
         $excel->setActiveSheetIndex(0)->setCellValue('D3', 'Keberangkatan');
         $excel->setActiveSheetIndex(0)->setCellValue('E3', 'Tujuan');
         $excel->setActiveSheetIndex(0)->setCellValue('F3', 'Tanggal Keberangkatan');
+        $excel->setActiveSheetIndex(0)->setCellValue('G3', 'Harga Total');
+        $excel->setActiveSheetIndex(0)->setCellValue('H3', 'Total Pendapatan Pada Tanggal '.$tgl_keberangkatan);
 
         $excel->getActiveSheet()->getStyle('A3')->applyFromArray($style_col);
         $excel->getActiveSheet()->getStyle('B3')->applyFromArray($style_col);
@@ -176,9 +188,12 @@ class Laporan extends CI_Controller
         $excel->getActiveSheet()->getStyle('D3')->applyFromArray($style_col);
         $excel->getActiveSheet()->getStyle('E3')->applyFromArray($style_col);
         $excel->getActiveSheet()->getStyle('F3')->applyFromArray($style_col);
+        $excel->getActiveSheet()->getStyle('G3')->applyFromArray($style_col);
+        $excel->getActiveSheet()->getStyle('H3')->applyFromArray($style_col);
 
         $no = 1;
         $numrow = 4;
+        $totalPendapatan = 0;
         foreach($pesawat as $data){
             $excel->setActiveSheetIndex(0)->setCellValue('A'.$numrow, $no);
             $excel->setActiveSheetIndex(0)->setCellValue('B'.$numrow, $data->nama_pesawat);
@@ -186,6 +201,7 @@ class Laporan extends CI_Controller
             $excel->setActiveSheetIndex(0)->setCellValue('D'.$numrow, $data->keberangkatan);
             $excel->setActiveSheetIndex(0)->setCellValue('E'.$numrow, $data->tujuan);
             $excel->setActiveSheetIndex(0)->setCellValue('F'.$numrow, $data->tgl_keberangkatan);
+            $excel->setActiveSheetIndex(0)->setCellValue('G'.$numrow, $data->harga_total);
       
             $excel->getActiveSheet()->getStyle('A'.$numrow)->applyFromArray($style_row);
             $excel->getActiveSheet()->getStyle('B'.$numrow)->applyFromArray($style_row);
@@ -193,10 +209,14 @@ class Laporan extends CI_Controller
             $excel->getActiveSheet()->getStyle('D'.$numrow)->applyFromArray($style_row);
             $excel->getActiveSheet()->getStyle('E'.$numrow)->applyFromArray($style_row);
             $excel->getActiveSheet()->getStyle('F'.$numrow)->applyFromArray($style_row);
+            $excel->getActiveSheet()->getStyle('G'.$numrow)->applyFromArray($style_row);
       
             $no++; // Tambah 1 setiap kali looping
             $numrow++; // Tambah 1 setiap kali looping
+            $totalPendapatan += $data->harga_total;
         }
+        $excel->setActiveSheetIndex(0)->setCellValue('H4', $totalPendapatan);
+        $excel->getActiveSheet()->getStyle('H4')->applyFromArray($style_row);
 
         $excel->getActiveSheet()->getColumnDimension('A')->setWidth(5); // Set width kolom A
         $excel->getActiveSheet()->getColumnDimension('B')->setWidth(15); // Set width kolom B
@@ -204,6 +224,8 @@ class Laporan extends CI_Controller
         $excel->getActiveSheet()->getColumnDimension('D')->setWidth(20); // Set width kolom D
         $excel->getActiveSheet()->getColumnDimension('E')->setWidth(30); // Set width kolom E
         $excel->getActiveSheet()->getColumnDimension('F')->setWidth(35); // Set width kolom F
+        $excel->getActiveSheet()->getColumnDimension('G')->setWidth(25); // Set width kolom G
+        $excel->getActiveSheet()->getColumnDimension('H')->setWidth(40); // Set width kolom H
     
     // Set height semua kolom menjadi auto (mengikuti height isi dari kolommnya, jadi otomatis)
         $excel->getActiveSheet()->getDefaultRowDimension()->setRowHeight(-1);
