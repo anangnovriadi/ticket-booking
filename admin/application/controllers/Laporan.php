@@ -50,8 +50,8 @@ class Laporan extends CI_Controller
         )
         );
         
-        $tgl_keberangkatan = $this->input->post('tgl_keberangkatan');
-        $kapal = $this->mdlpemesanan->getAllPemesananKapal($tgl_keberangkatan)->result();
+        $tgl_pemesanan = $this->input->post('tgl_pemesanan');
+        $kapal = $this->mdlpemesanan->getAllPemesananKapal($tgl_pemesanan)->result();
         
         $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pemesanan Tiket Kapal Terakhir");
         $excel->getActiveSheet()->mergeCells('A1:F1');

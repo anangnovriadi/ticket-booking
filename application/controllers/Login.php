@@ -26,10 +26,12 @@ class Login extends CI_Controller {
                 // var_dump($data->username);
                 $dataId = $data->id;
                 $dataUser = $data->username;
+                $dataEmail = $data->email;
 
                 $this->session->set_userdata($sess_data);
                 $this->session->set_userdata('username', $dataUser);
                 $this->session->set_userdata('id', $dataId);
+                $this->session->set_userdata('email', $dataEmail);
 
                 if($this->session->userdata('hak_akses') == 'user') {
                     $this->session->set_flashdata('message_success', 'Success Login');

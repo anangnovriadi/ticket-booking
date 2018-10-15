@@ -9,10 +9,12 @@ class Welcome extends CI_Controller {
 
     public function index()
     {
+        $this->mdlfetch->deleteTransPesawat();
+        $this->mdlfetch->deleteTransKapal();
         $data['allAsal'] = $this->mdlfetch->getDataPAsal();
         $data['allTujuan'] = $this->mdlfetch->getDataPTujuan();
         $data['allKapalAsal'] = $this->mdlfetch->getDataKAsal();
         $data['allKapalTujuan'] = $this->mdlfetch->getDataKTujuan();
         $this->load->view('home', $data);
-    }	
+    }
 }

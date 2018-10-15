@@ -32,7 +32,8 @@ class Transaksi extends CI_Controller {
             $jumlah_penumpang = $this->input->post('jumlah_pen');
             $total_harga = $this->input->post('total_harga');
             $id_user = $this->session->userdata('id');
-            
+            $dateNow = date('Y-m-d H:i:s');
+
             $dataInsert = array(
                 'id' => '',
                 'id_user' => $id_user,
@@ -40,7 +41,8 @@ class Transaksi extends CI_Controller {
                 'tgl_keberangkatan' => $tgl_keberangkatan,
                 'jumlah_tiket' => $jumlah_penumpang,
                 'harga_total' => $total_harga,
-                'bayar' => 0
+                'bayar' => 0,
+                'tgl_pemesanan' => $dateNow
             );
 
             $this->mdlinserttiket->insert('tb_tiket_pesawat', $dataInsert);
@@ -48,6 +50,34 @@ class Transaksi extends CI_Controller {
             $this->session->set_userdata('jumlah_tiket', $dataInsert['jumlah_tiket']);
             $this->session->set_userdata('harga_total', $dataInsert['harga_total']);
             
+            $this->load->library('email');
+            $config['protocol']    = 'smtp';
+            $config['smtp_host']    = 'ssl://smtp.gmail.com';
+            $config['smtp_port']    = '465';
+            $config['smtp_timeout'] = '7';
+            $config['smtp_user']    = 'anangnov99@gmail.com';
+            $config['smtp_pass']    = 'ansav45gma';
+            $config['charset']    = 'iso-8859-1';
+            $config['newline']    = "\r\n";
+            $config['mailtype'] = 'html'; 
+            $config['validation'] = TRUE; 
+            $this->email->initialize($config);
+
+            $from_email = "admin.renijaya@gmail.com"; 
+            // $to_email = "novriadi@twiscode.com"; 
+            $data = array(
+                'total_harga' => $total_harga,
+                'email' => $email
+            );
+            $this->load->library('email'); 
+            
+            $templates = $this->load->view('email/sendemail.php', $data, TRUE);
+            $this->email->from($from_email, 'Admin Reni Jaya Travel'); 
+            $this->email->to($email);
+            $this->email->subject('Pembayaran Reni Jaya Travel'); 
+            $this->email->message($templates); 
+            $this->email->send();
+
             redirect(base_url('/pembayaran'));
         } else {
             redirect(base_url('/login'));
@@ -61,7 +91,8 @@ class Transaksi extends CI_Controller {
             $jumlah_penumpang = $this->input->post('jumlah_pen');
             $total_harga = $this->input->post('total_harga');
             $id_user = $this->session->userdata('id');
-            
+            $email = $this->session->userdata('email');
+
             $dataInsert = array(
                 'id' => '',
                 'id_user' => $id_user,
@@ -77,6 +108,34 @@ class Transaksi extends CI_Controller {
             $this->session->set_userdata('jumlah_tiket', $dataInsert['jumlah_tiket']);
             $this->session->set_userdata('harga_total', $dataInsert['harga_total']);
             
+            $this->load->library('email');
+            $config['protocol']    = 'smtp';
+            $config['smtp_host']    = 'ssl://smtp.gmail.com';
+            $config['smtp_port']    = '465';
+            $config['smtp_timeout'] = '7';
+            $config['smtp_user']    = 'anangnov99@gmail.com';
+            $config['smtp_pass']    = 'ansav45gma';
+            $config['charset']    = 'iso-8859-1';
+            $config['newline']    = "\r\n";
+            $config['mailtype'] = 'html'; 
+            $config['validation'] = TRUE; 
+            $this->email->initialize($config);
+
+            $from_email = "admin.renijaya@gmail.com"; 
+            // $to_email = "novriadi@twiscode.com"; 
+            $data = array(
+                'total_harga' => $total_harga,
+                'email' => $email
+            );
+            $this->load->library('email'); 
+            
+            $templates = $this->load->view('email/sendemail.php', $data, TRUE);
+            $this->email->from($from_email, 'Admin Reni Jaya Travel'); 
+            $this->email->to($email);
+            $this->email->subject('Pembayaran Reni Jaya Travel'); 
+            $this->email->message($templates); 
+            $this->email->send();
+
             redirect(base_url('/pembayaran'));
         } else {
             redirect(base_url('/login'));
