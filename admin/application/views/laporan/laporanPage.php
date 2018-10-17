@@ -22,9 +22,10 @@
       
         <section class="content container-fluid">
           <div class="col-md-8 col-md-offset-2">
-            <form action="<?php ?>" method="post" class="chart-box">
+            <!-- <form action="<?php ?>" method="post" class="chart-box"> -->
                 <div class="row">
                     <div class="col-md-6">
+                        <form action="<?php echo base_url('admin/laporan/pesawat'); ?>" method="post" class="chart-box">
                         <fieldset class="form-group text-center">
                             <h4>Laporan Tiket Pesawat</h4>
                             <br />
@@ -32,10 +33,13 @@
                                 <input class="form-control input-cus" placeholder="Pilih Tanggal" name="tgl_keberangkatan" type="text" id="dateP">
                             </div>
                             <br />
-                            <a style="margin-right: 10px;" href="<?php echo base_url('admin/laporan/pesawat') ?>" class="btn btn-primary">Cetak</a>
+                            <button tyle="margin-right: 10px;" type="submit" class="btn btn-primary">Cetak</button>
+                            <!-- <a style="margin-right: 10px;" href="<?php echo base_url('admin/laporan/pesawat') ?>" class="btn btn-primary">Cetak</a> -->
+                            </form>
                         </fieldset>
                     </div>
                     <div class="col-md-6">
+                        <form action="<?php echo base_url('admin/laporan/kapal'); ?>" method="post" class="chart-box">
                         <fieldset class="form-group text-center">
                             <h4>Laporan Tiket Kapal</h4>
                             <br />
@@ -43,11 +47,13 @@
                                 <input class="form-control input-cus" placeholder="Pilih Tanggal" name="tgl_keberangkatan" type="text" id="datePKapal">
                             </div>
                             <br />
-                            <a style="margin-left: 10px;" href="<?php echo base_url('admin/laporan/kapal') ?>" class="btn btn-primary">Cetak</a>
+                            <button tyle="margin-right: 10px;" type="submit" class="btn btn-primary">Cetak</button>
+                            <!-- <a style="margin-left: 10px;" href="<?php echo base_url('admin/laporan/kapal') ?>" class="btn btn-primary">Cetak</a> -->
                         </fieldset>
+                        </form>
                     </div>
                 </div>
-            </form>
+            <!-- </form> -->
           </div>
         </section>
     </div> 
@@ -69,6 +75,7 @@
         todayHighlight: true
     });
 </script>
+<?php $this->load->view('layout/js'); ?>
 
 </body>
 </html>

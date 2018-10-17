@@ -8,6 +8,7 @@ class Laporan extends CI_Controller
         parent::__construct();
         $this->load->model('mdlpemesanan');
         include APPPATH.'third_party/PHPExcel/PHPExcel.php';
+        $this->load->helper('url');
     }
 
     public function index() 
@@ -49,7 +50,8 @@ class Laporan extends CI_Controller
         )
         );
         
-        $kapal = $this->mdlpemesanan->getAllPemesananKapal()->result();
+        $tgl_keberangkatan = $this->input->post('tgl_keberangkatan');
+        $kapal = $this->mdlpemesanan->getAllPemesananKapal($tgl_keberangkatan)->result();
         
         $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pemesanan Tiket Kapal Terakhir");
         $excel->getActiveSheet()->mergeCells('A1:F1');
@@ -148,7 +150,8 @@ class Laporan extends CI_Controller
         )
         );
         
-        $pesawat = $this->mdlpemesanan->getAllPemesananPesawat()->result();
+        $tgl_keberangkatan = $this->input->post('tgl_keberangkatan');
+        $pesawat = $this->mdlpemesanan->getAllPemesananPesawat($tgl_keberangkatan)->result();
         
         $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pemesanan Tiket Pesawat Terakhir");
         $excel->getActiveSheet()->mergeCells('A1:F1');
