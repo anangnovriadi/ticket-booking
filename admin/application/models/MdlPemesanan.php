@@ -13,20 +13,22 @@ class MdlPemesanan extends CI_Model
         return $this->db->get($table);
     }
 
-    public function getAllPemesananPesawat() 
+    public function getAllPemesananPesawat($tgl_keberangkatan) 
     {
-        $query = 'SELECT * FROM tb_tiket_pesawat INNER JOIN tb_users 
+        $query = "SELECT * FROM tb_tiket_pesawat INNER JOIN tb_users 
                     ON tb_tiket_pesawat.`id_user` = tb_users.`id` 
-                        INNER JOIN tb_pesawat ON tb_tiket_pesawat.`id_pesawat` = tb_pesawat.`id`';
+                        INNER JOIN tb_pesawat ON tb_tiket_pesawat.`id_pesawat` = tb_pesawat.`id` 
+                        WHERE tgl_keberangkatan = '$tgl_keberangkatan'";
 
         return $this->db->query($query);
     }
 
-    public function getAllPemesananKapal() 
+    public function getAllPemesananKapal($tgl_keberangkatan) 
     {
-        $query = 'SELECT * FROM tb_tiket_kapal INNER JOIN tb_users 
+        $query = "SELECT * FROM tb_tiket_kapal INNER JOIN tb_users 
                     ON tb_tiket_kapal.`id_user` = tb_users.`id` 
-                        INNER JOIN tb_kapal ON tb_tiket_kapal.`id_kapal` = tb_kapal.`id`';
+                        INNER JOIN tb_kapal ON tb_tiket_kapal.`id_kapal` = tb_kapal.`id`
+                        WHERE tgl_keberangkatan = '$tgl_keberangkatan'";
 
         return $this->db->query($query);
     }
