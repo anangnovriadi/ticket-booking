@@ -33,6 +33,11 @@ class Transaksi extends CI_Controller {
             $total_harga = $this->input->post('total_harga');
             $id_user = $this->session->userdata('id');
             $dateNow = date('Y-m-d H:i:s');
+            
+            //Kode Transaksi
+            $ktNum = rand(10, 100);
+            $d = date('d');
+            $kt = 'PS0'.$d.$ktNum;
 
             $dataInsert = array(
                 'id' => '',
@@ -42,7 +47,8 @@ class Transaksi extends CI_Controller {
                 'jumlah_tiket' => $jumlah_penumpang,
                 'harga_total' => $total_harga,
                 'bayar' => 0,
-                'tgl_pemesanan' => $dateNow
+                'tgl_pemesanan' => $dateNow,
+                'kode_transaksi' => $kt
             );
 
             $this->mdlinserttiket->insert('tb_tiket_pesawat', $dataInsert);
@@ -64,10 +70,12 @@ class Transaksi extends CI_Controller {
             $this->email->initialize($config);
 
             $from_email = "admin.renijaya@gmail.com"; 
-            // $to_email = "novriadi@twiscode.com"; 
+            $to_email = "novriadi@twiscode.com"; 
+            $email = $this->session->userdata('email');
             $data = array(
                 'total_harga' => $total_harga,
-                'email' => $email
+                'email' => $email,
+                'kode_transaksi' => $kt
             );
             $this->load->library('email'); 
             
@@ -93,6 +101,11 @@ class Transaksi extends CI_Controller {
             $id_user = $this->session->userdata('id');
             $email = $this->session->userdata('email');
 
+            //Kode Transaksi
+            $ktNum = rand(10, 100);
+            $d = date('d');
+            $kt = 'PS0'.$d.$ktNum;
+
             $dataInsert = array(
                 'id' => '',
                 'id_user' => $id_user,
@@ -100,7 +113,8 @@ class Transaksi extends CI_Controller {
                 'tgl_keberangkatan' => $tgl_keberangkatan,
                 'jumlah_tiket' => $jumlah_penumpang,
                 'harga_total' => $total_harga,
-                'bayar' => 0
+                'bayar' => 0,
+                'kode_transaksi' => $kt
             );
 
             $this->mdlinserttiketkapal->insert('tb_tiket_kapal', $dataInsert);
@@ -123,9 +137,11 @@ class Transaksi extends CI_Controller {
 
             $from_email = "admin.renijaya@gmail.com"; 
             // $to_email = "novriadi@twiscode.com"; 
+            $email = $this->session->userdata('email');
             $data = array(
                 'total_harga' => $total_harga,
-                'email' => $email
+                'email' => $email,
+                'kode_transaksi' => $kt
             );
             $this->load->library('email'); 
             
