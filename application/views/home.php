@@ -126,7 +126,7 @@
 			<div class="col-md-9">
 				<h2 class="font-lg font-bold">Jasa dan Layanan</h2><br>
 				<p class="font-md font-medium">Reni Jaya Travel adalah jasa yang menjual tiket pesawat maupun kapal antar propinsi maupun pulau.</p><br>
-				<a href="#" class="btn btn-lg bg-purple font-bold">CONTACT US</a>
+				<a href="https://api.whatsapp.com/send?phone=6282143463188&amp;text=Assalamu%27alaikum, Saya ingin memesan tiket." class="btn btn-lg bg-purple font-bold">CONTACT US</a>
 			</div>
 		</div>
 	</div>
