@@ -43,11 +43,11 @@ CREATE TABLE `tb_cms_pembayaran` (
   `atas_nama` text NOT NULL,
   `img_bank` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tb_cms_pembayaran` */
 
-insert  into `tb_cms_pembayaran`(`id`,`nama_bank`,`no_rekening`,`atas_nama`,`img_bank`) values (1,'BRI','7867565234','Reni','star.png'),(2,'BCA','78374834','reni','dejavu.png');
+insert  into `tb_cms_pembayaran`(`id`,`nama_bank`,`no_rekening`,`atas_nama`,`img_bank`) values (3,'BCA','3810155271','Reni','bca.png'),(4,'BRI','140005069563','Reni','bri.png');
 
 /*Table structure for table `tb_cms_pengaturan` */
 
