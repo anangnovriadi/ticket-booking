@@ -87,7 +87,6 @@ class Pesawat extends CI_Controller
         $hargaStr = str_replace($reg, $regStr, $harga);
 
         $dataUpdate = array(
-            'id' => $id,
             'nama_pesawat' => $nama_pesawat,
             'keberangkatan' => $keberangkatan,
             'tujuan' => $tujuan,
