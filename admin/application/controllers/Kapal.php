@@ -83,7 +83,6 @@ class Kapal extends CI_Controller
         $hargaStr = str_replace($reg, $regStr, $harga);
 
         $dataUpdate = array(
-            'id' => '',
             'nama_kapal' => $nama_kapal,
             'kode_kapal' => $kode_kapal,
             'pelabuhan_asal' => $asal,

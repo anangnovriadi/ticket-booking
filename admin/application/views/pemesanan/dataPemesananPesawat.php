@@ -32,6 +32,7 @@
                                     <th>Nama Pemesan</th>
                                     <th>Nama Pesawat</th>
                                     <th>Tanggal Keberangkatan</th>
+                                    <th>Kode Transaksi</th>
                                     <th>Asal</th>
                                     <th>Tujuan</th>
                                     <th>Jumlah Tiket</th>
@@ -52,6 +53,7 @@
                                         <td><?php echo $no; ?></td>
                                         <td><?php echo $users->username; ?></td>
                                         <td><?php echo $kapal->nama_pesawat; ?></td>
+                                        <td><?php echo $rows->kode_transaksi; ?></td>
                                         <td><?php echo $rows->tgl_keberangkatan; ?></td>
                                         <td><?php echo $kapal->keberangkatan; ?></td>
                                         <td><?php echo $kapal->tujuan; ?></td>
