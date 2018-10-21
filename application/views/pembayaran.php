@@ -30,8 +30,13 @@
                             <li>SMS / Whatsapp : 082 143463188</li>
                             <br>
                             <h4><b>Daftar Rekening Bank :</b></h4>
-                            <li>BCA : 3810155271</li>
-                            <li>Mandiri : 140005069563</li>
+                            <?php 
+                                foreach($tmpRekening as $rekening) {
+                            ?>
+                            <li><?php echo $rekening->nama_bank.' <b>:</b> '.$rekening->no_rekening.'('.$rekening->atas_nama.')'; ?></li>
+                            <?php
+                                }
+                            ?>
                         </div>
                     </div>
                     <div class="col-md-5">
