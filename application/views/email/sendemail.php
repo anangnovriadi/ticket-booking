@@ -9,7 +9,7 @@
     <div>
         Lakukan Pembayaran sebesar <b>Rp.<?php echo $total_harga; ?></b> Ke No Rekening BCA : 3810155271(Atas Nama Reni Jaya Travel),
         <br />
-        Komfirmasi Pembayaran dengan cara mengirimkan bukti transfer via Whatsapp : 082 143463188
+        Konfirmasi Pembayaran dengan cara menunjukkan kode transaksi <b><?php echo $kode_transaksi; ?></b> dan mengirimkan bukti transfer via Whatsapp : 082 143463188
         <br /><br />
         <b>Jika pembayaran dilakukan kurang dari 1 x 24 jam maka transaksi akan dibatalkan</b>
     </div>
