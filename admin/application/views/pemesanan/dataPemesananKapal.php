@@ -38,6 +38,7 @@
                                     <th>Jumlah Tiket</th>
                                     <th>Harga</th>
                                     <th>Harga Total</th>
+                                    <th>Tanggal Pemesanan</th>
                                     <th>Bayar</th>
                                 </tr>
                                 </thead>
@@ -46,20 +47,21 @@
                                     $no = 1;
 
                                     foreach($tmpPemKapal as $rows) {
-                                        foreach($tmpKapal as $kapal) {
-                                            foreach($tmpUsers as $users) {
+                                        // foreach($tmpKapal as $kapal) {
+                                        //     foreach($tmpUsers as $users) {
                                 ?>
                                     <tr>
                                         <td><?php echo $no; ?></td>
-                                        <td><?php echo $users->username; ?></td>
-                                        <td><?php echo $kapal->nama_kapal; ?></td>
+                                        <td><?php echo $rows->username; ?></td>
+                                        <td><?php echo $rows->nama_kapal; ?></td>
                                         <td><?php echo $rows->tgl_keberangkatan; ?></td>
                                         <td><?php echo $rows->kode_transaksi; ?></td>
-                                        <td><?php echo $kapal->pelabuhan_asal; ?></td>
-                                        <td><?php echo $kapal->pelabuhan_tujuan; ?></td>
+                                        <td><?php echo $rows->pelabuhan_asal; ?></td>
+                                        <td><?php echo $rows->pelabuhan_tujuan; ?></td>
                                         <td><?php echo $rows->jumlah_tiket; ?></td>
-                                        <td><?php echo $kapal->harga; ?></td>
+                                        <td><?php echo $rows->harga; ?></td>
                                         <td><?php echo $rows->harga_total; ?></td>
+                                        <td><?php echo $rows->tgl_pemesanan; ?></td>
                                         <td>
                                             <a href="<?php echo base_url('admin/pemesanan/pemesananKapal/edit/'.$rows->id); ?>">
                                                 <?php 
@@ -74,8 +76,8 @@
                                     </tr>
                                 <?php
                                     $no++;
-                                            }
-                                        }
+                                        //     }
+                                        // }
                                     }
                                 ?>
                                 </tbody>

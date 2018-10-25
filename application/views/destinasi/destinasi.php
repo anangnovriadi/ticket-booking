@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php $this->load->view('layout/meta'); ?>
-	<title>Home - Reni Jaya Travel</title>
+	<title>Destinasi - Reni Jaya Travel</title>
 	<?php $this->load->view('layout/css'); ?>
 </head>
 <body>

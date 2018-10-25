@@ -32,6 +32,7 @@ class Transaksi extends CI_Controller {
             $jumlah_penumpang = $this->input->post('jumlah_pen');
             $total_harga = $this->input->post('total_harga');
             $id_user = $this->session->userdata('id');
+            date_default_timezone_set("Asia/Bangkok");
             $dateNow = date('Y-m-d H:i:s');
             
             //Kode Transaksi
@@ -100,6 +101,8 @@ class Transaksi extends CI_Controller {
             $total_harga = $this->input->post('total_harga');
             $id_user = $this->session->userdata('id');
             $email = $this->session->userdata('email');
+            date_default_timezone_set("Asia/Bangkok");
+            $dateNow = date('Y-m-d H:i:s');
 
             //Kode Transaksi
             $ktNum = rand(10, 100);
@@ -114,6 +117,7 @@ class Transaksi extends CI_Controller {
                 'jumlah_tiket' => $jumlah_penumpang,
                 'harga_total' => $total_harga,
                 'bayar' => 0,
+                'tgl_pemesanan' => $dateNow,
                 'kode_transaksi' => $kt
             );
 

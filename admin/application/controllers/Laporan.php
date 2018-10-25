@@ -25,7 +25,7 @@ class Laporan extends CI_Controller
         $excel->getProperties()->setCreator('My Notes Code')
                     ->setLastModifiedBy('My Notes Code')
                     ->setTitle("Data Pemesanan Tiket Kapal")
-                    ->setSubject("Tiket Pesawat")
+                    ->setSubject("Tiket Kapal")
                     ->setDescription("Laporan Data Pemesanan Tiket Kapal")
                     ->setKeywords("Data Tiket Kapal");
         $style_col = array(
@@ -54,8 +54,8 @@ class Laporan extends CI_Controller
         )
         );
         
-        $tgl_pemesanan = $this->input->post('tgl_pemesanan');
-        $kapal = $this->mdlpemesanan->getAllPemesananKapal($tgl_pemesanan)->result();
+        $tgl_keberangkatan = $this->input->post('tgl_keberangkatan');
+        $kapal = $this->mdlpemesanan->getAllPemesananKapal($tgl_keberangkatan)->result();
         
         $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pemesanan Tiket Kapal Terakhir");
         $excel->getActiveSheet()->mergeCells('A1:H1');
@@ -66,8 +66,8 @@ class Laporan extends CI_Controller
         $excel->setActiveSheetIndex(0)->setCellValue('A3', 'No');
         $excel->setActiveSheetIndex(0)->setCellValue('B3', 'Nama Kapal');
         $excel->setActiveSheetIndex(0)->setCellValue('C3', 'Nama Pemesan');
-        $excel->setActiveSheetIndex(0)->setCellValue('D3', 'Keberangkatan');
-        $excel->setActiveSheetIndex(0)->setCellValue('E3', 'Tujuan');
+        $excel->setActiveSheetIndex(0)->setCellValue('D3', 'Pelabuhan Asal');
+        $excel->setActiveSheetIndex(0)->setCellValue('E3', 'Pelabuhan Tujuan');
         $excel->setActiveSheetIndex(0)->setCellValue('F3', 'Tanggal Keberangkatan');
         $excel->setActiveSheetIndex(0)->setCellValue('G3', 'Harga Total');
         $excel->setActiveSheetIndex(0)->setCellValue('H3', 'Total Pendapatan Pada Tanggal '.$tgl_keberangkatan);
@@ -91,6 +91,7 @@ class Laporan extends CI_Controller
             $excel->setActiveSheetIndex(0)->setCellValue('D'.$numrow, $data->pelabuhan_asal);
             $excel->setActiveSheetIndex(0)->setCellValue('E'.$numrow, $data->pelabuhan_tujuan);
             $excel->setActiveSheetIndex(0)->setCellValue('F'.$numrow, $data->tgl_keberangkatan);
+            $excel->setActiveSheetIndex(0)->setCellValue('G'.$numrow, $data->harga_total);
       
             $excel->getActiveSheet()->getStyle('A'.$numrow)->applyFromArray($style_row);
             $excel->getActiveSheet()->getStyle('B'.$numrow)->applyFromArray($style_row);
@@ -98,6 +99,7 @@ class Laporan extends CI_Controller
             $excel->getActiveSheet()->getStyle('D'.$numrow)->applyFromArray($style_row);
             $excel->getActiveSheet()->getStyle('E'.$numrow)->applyFromArray($style_row);
             $excel->getActiveSheet()->getStyle('F'.$numrow)->applyFromArray($style_row);
+            $excel->getActiveSheet()->getStyle('G'.$numrow)->applyFromArray($style_row);
       
             $no++; // Tambah 1 setiap kali looping
             $numrow++; // Tambah 1 setiap kali looping
@@ -120,7 +122,7 @@ class Laporan extends CI_Controller
     // Set orientasi kertas jadi LANDSCAPE
         $excel->getActiveSheet()->getPageSetup()->setOrientation(PHPExcel_Worksheet_PageSetup::ORIENTATION_LANDSCAPE);
         
-        $excel->getActiveSheet(0)->setTitle("Laporan Data Tiket Pesawat");
+        $excel->getActiveSheet(0)->setTitle("Laporan Data Tiket Kapal");
         $excel->setActiveSheetIndex(0);
         
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');

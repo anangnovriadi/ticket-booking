@@ -19,13 +19,13 @@ class MdlFetch extends CI_Model {
     }
 
     public function deleteTransPesawat() {
-        $query = "DELETE FROM tb_tiket_pesawat WHERE DATEDIFF(CURDATE(), tgl_pemesanan) < 1 AND bayar = '0'";
+        $query = "DELETE FROM tb_tiket_pesawat WHERE DATEDIFF(CURDATE(), tgl_pemesanan) >= 1 AND bayar = '0'";
 
         return $this->db->query($query);
     }
 
     public function deleteTransKapal() {
-        $query = "DELETE FROM tb_tiket_kapal WHERE DATEDIFF(CURDATE(), tgl_pemesanan) < 1 AND bayar = '0'";
+        $query = "DELETE FROM tb_tiket_kapal WHERE DATEDIFF(CURDATE(), tgl_pemesanan) >= 1 AND bayar = '0'";
 
         return $this->db->query($query);
     }

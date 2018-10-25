@@ -12,17 +12,7 @@ class PemesananKapal extends CI_Controller {
     }
 
     public function index() {
-        $getDataK = $this->mdlpemesanan->getPemesananKapal('tb_tiket_kapal')->result();
-
-        foreach($getDataK as $row) {
-            $getKapal = $this->mdlpemesanan->getKapalById($row->id_kapal)->result();
-            $data['tmpKapal'] = $getKapal;
-        }
-
-        foreach($getDataK as $row) {
-            $getUsers = $this->mdlpemesanan->getUsersById($row->id_user)->result();
-            $data['tmpUsers'] = $getUsers;
-        }
+        $getDataK = $this->mdlpemesanan->getPemesananByKapal()->result();
 
         $data['tmpPemKapal'] = $getDataK;
         
@@ -43,7 +33,6 @@ class PemesananKapal extends CI_Controller {
         $bayar = $this->input->post('bayar');
 
         $dataUpdate = array(
-            'id' => '',
             'bayar' => $bayar,
         );
         
