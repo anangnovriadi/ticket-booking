@@ -12,17 +12,7 @@ class PemesananPesawat extends CI_Controller {
     }
 
     public function index() {
-        $getDataK = $this->mdlpemesanan->getPemesananPesawat('tb_tiket_pesawat')->result();
-
-        foreach($getDataK as $row) {
-            $getPesawat = $this->mdlpemesanan->getPesawatById($row->id_pesawat)->result();
-            $data['tmpPesawat'] = $getPesawat;
-        }
-
-        foreach($getDataK as $row) {
-            $getUsers = $this->mdlpemesanan->getUsersById($row->id_user)->result();
-            $data['tmpUsers'] = $getUsers;
-        }
+        $getDataK = $this->mdlpemesanan->getPemesananByPesawat()->result();
 
         $data['tmpPemPesawat'] = $getDataK;
         
