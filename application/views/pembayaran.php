@@ -38,6 +38,9 @@
                                 }
                             ?>
                         </div>
+                        <div class="alert alert-danger">
+                            <a>Klik <a href="<?php echo base_url('/pembatalan'); ?>"><b>disini</b></a> jika sudah melakukan pembayaran dan igin membatalkan!</a>
+                        </div>
                     </div>
                     <div class="col-md-5">
                         <div class="alert alert-warning" role="alert">

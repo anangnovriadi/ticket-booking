@@ -12,6 +12,8 @@
         Konfirmasi Pembayaran dengan cara menunjukkan kode transaksi <b><?php echo $kode_transaksi; ?></b> dan mengirimkan bukti transfer via Whatsapp : 082 143463188
         <br /><br />
         <b>Jika pembayaran dilakukan kurang dari 1 x 24 jam maka transaksi akan dibatalkan</b>
+        <br />
+        <a>Klik <a href="<?php echo base_url('/pembatalan'); ?>"><b>disini</b></a> jika sudah melakukan pembayaran dan igin membatalkan!</a>
     </div>
 </body>
 </html>
