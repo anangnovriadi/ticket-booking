@@ -27,7 +27,7 @@
                     <div class="col-md-6">
                         <form action="<?php echo base_url('admin/laporan/pesawat'); ?>" method="post" class="chart-box">
                         <fieldset class="form-group text-center">
-                            <h4>Laporan Tiket Pesawat</h4>
+                            <h4>Laporan Harian Tiket Pesawat</h4>
                             <br />
                             <div class="col-md">
                                 <input class="form-control input-cus" placeholder="Pilih Tanggal" name="tgl_keberangkatan" type="text" id="dateP">
@@ -41,10 +41,40 @@
                     <div class="col-md-6">
                         <form action="<?php echo base_url('admin/laporan/kapal'); ?>" method="post" class="chart-box">
                         <fieldset class="form-group text-center">
-                            <h4>Laporan Tiket Kapal</h4>
+                            <h4>Laporan Harian Tiket Kapal</h4>
                             <br />
                             <div class="col-md">
                                 <input class="form-control input-cus" placeholder="Pilih Tanggal" name="tgl_keberangkatan" type="text" id="datePKapal">
+                            </div>
+                            <br />
+                            <button tyle="margin-right: 10px;" type="submit" class="btn btn-primary">Cetak</button>
+                            <!-- <a style="margin-left: 10px;" href="<?php echo base_url('admin/laporan/kapal') ?>" class="btn btn-primary">Cetak</a> -->
+                        </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="<?php echo base_url('admin/laporan/pesawatBulan'); ?>" method="post" class="chart-box">
+                        <fieldset class="form-group text-center">
+                            <h4>Laporan Bulanan Tiket Pesawat</h4>
+                            <br />
+                            <div class="col-md">
+                                <input class="form-control input-cus" placeholder="Pilih Bulan" name="bulan" type="text" id="dateB">
+                            </div>
+                            <br />
+                            <button tyle="margin-right: 10px;" type="submit" class="btn btn-primary">Cetak</button>
+                            <!-- <a style="margin-right: 10px;" href="<?php echo base_url('admin/laporan/pesawat') ?>" class="btn btn-primary">Cetak</a> -->
+                            </form>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="<?php echo base_url('admin/laporan/kapalBulan'); ?>" method="post" class="chart-box">
+                        <fieldset class="form-group text-center">
+                            <h4>Laporan Bulanan Tiket Kapal</h4>
+                            <br />
+                            <div class="col-md">
+                                <input class="form-control input-cus" placeholder="Pilih Bulan" name="bulan" type="text" id="dateBKapal">
                             </div>
                             <br />
                             <button tyle="margin-right: 10px;" type="submit" class="btn btn-primary">Cetak</button>
@@ -73,6 +103,16 @@
         format: 'yyyy-mm-dd',
         startDate: '-30d',
         todayHighlight: true
+    });
+    $('#dateB').datepicker({
+        format: "mm",
+        viewMode: "months", 
+        minViewMode: "months"
+    });
+    $('#dateBKapal').datepicker({
+        format: "mm",
+        viewMode: "months", 
+        minViewMode: "months"
     });
 </script>
 <?php $this->load->view('layout/js'); ?>
