@@ -68,8 +68,6 @@
             icon: "success",
             button: false,
             timer: 1200
-        }).then(function() {
-            window.location = "/";
         });
     </script>
     <?php

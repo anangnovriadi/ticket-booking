@@ -33,6 +33,12 @@
                     <li><a href="<?php echo base_url('admin/pemesanan/pemesananKapal'); ?>"><i class="fa fa-angle-right"></i> Kapal</a></li>
                 </ul>
             </li>
+            <li class="treeview"> <a href="#"><i class="fa fa-globe"></i> <span>Feedback Pelanggan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?php echo base_url('admin/masukan'); ?>"><i class="fa fa-angle-right"></i> Masukan</a></li>
+                    <li><a href="<?php echo base_url('admin/komplain'); ?>"><i class="fa fa-angle-right"></i> Komplain</a></li>
+                </ul>
+            </li>
             <li class="treeview"> <a href="#"><i class="fa fa-globe"></i> <span>Kelola Front Web</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
                 <ul class="treeview-menu">
                     <li><a href="<?php echo base_url('admin/alamat'); ?>"><i class="fa fa-angle-right"></i> Alamat</a></li>
