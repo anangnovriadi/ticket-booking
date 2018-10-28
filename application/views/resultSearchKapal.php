@@ -35,9 +35,18 @@
                                 </div>
                                 <div style="display: flex;padding-bottom: 6px;">
                                     <input type="hidden" value="<?php echo $row->id; ?>">
+                                    <h4 style="width: 100%;"><p><b>Pelabuhan Asal</b></p><?php echo $row->pelabuhan_asal ?></h4>
+                                    <input type="hidden" name="tgl_keberangkatan" value="<?php echo $this->session->userdata('tgl'); ?>" />
+                                    <h4 style="float: right;text-align: right;width: 100%;"><p><b>Tujuan</b></p><?php echo $row->pelabuhan_tujuan; ?></h4>
+                                </div>
+                                <div style="display: flex;padding-bottom: 6px;">
+                                    <input type="hidden" value="<?php echo $row->id; ?>">
                                     <h4 style="width: 100%;"><p><b>Nama Kapal</b></p><?php echo $row->nama_kapal ?></h4>
                                     <input type="hidden" name="tgl_keberangkatan" value="<?php echo $this->session->userdata('tgl'); ?>" />
                                     <h4 style="float: right;text-align: right;width: 100%;"><p><b>Harga</b></p>Rp. <?php echo $row->harga; ?></h4>
+                                </div>
+                                <div style="display: flex;padding-bottom: 20px;padding-top: 2px">
+                                    <a>Stok <span class="badge"><?php echo $row->stok; ?></span></a>
                                 </div>
                                 <?php 
                                     $id_kapal = $row->id;

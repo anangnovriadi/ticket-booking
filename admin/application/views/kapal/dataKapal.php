@@ -36,6 +36,7 @@
                                     <th>Jam Berangkat</th>
                                     <th>Jam Tiba</th>
                                     <th>Harga</th>
+                                    <th>Stok</th>
                                     <th>Status</th>
                                     <th>Tools</th>
                                 </tr>
@@ -55,6 +56,7 @@
                                         <td><?php echo $rows->jam_keberangkatan; ?></td>
                                         <td><?php echo $rows->jam_tiba; ?></td>
                                         <td><?php echo $rows->harga; ?></td>
+                                        <td><?php echo $rows->stok; ?></td>
                                         <td>
                                             <?php
                                                 if($rows->tersedia == 1) {

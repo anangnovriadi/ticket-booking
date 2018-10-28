@@ -82,6 +82,14 @@
                 <div class="row">
                   <div class="col-md-12">
                     <fieldset class="form-group">
+                      <label>Stok Kapal</label>
+                      <input class="form-control" name="stok" id="basicInput" type="text" />
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <fieldset class="form-group">
                       <label>Kode Kapal</label>
                       <input class="form-control" name="kode_kapal" id="basicInput" type="text" />
                     </fieldset>

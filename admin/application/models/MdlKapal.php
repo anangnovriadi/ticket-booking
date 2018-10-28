@@ -30,4 +30,5 @@ class MdlKapal extends CI_Model
     }
 }
 
+
 ?>
