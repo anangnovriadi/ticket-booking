@@ -30,6 +30,7 @@
                 <br/>
                 <div class="row">
                 <input class="form-control" value="<?php echo $rows->id; ?>" name="id" id="basicInput" type="hidden" />
+                <input class="form-control" value="<?php echo $rows->id_kapal; ?>" name="id_kapal" id="basicInput" type="hidden" />
                   <div class="col-md-12">
                     <fieldset class="form-group">
                       <label>Bayar</label>

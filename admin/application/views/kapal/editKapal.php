@@ -89,6 +89,14 @@
                 <div class="row">
                   <div class="col-md-12">
                     <fieldset class="form-group">
+                      <label>Stok Kapal</label>
+                      <input class="form-control" value="<?php echo $rows->stok; ?>" name="stok" type="text" />
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <fieldset class="form-group">
                       <label>Kode Kapal</label>
                       <input class="form-control" value="<?php echo $rows->kode_kapal; ?>" name="kode_kapal" id="basicInput" type="text" />
                     </fieldset>

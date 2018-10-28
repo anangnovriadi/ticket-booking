@@ -35,6 +35,7 @@ class Kapal extends CI_Controller
         $jam_keberangkatan = $this->input->post('jam_keberangkatan');
         $jam_tiba = $this->input->post('jam_tiba');
         $harga = $this->input->post('harga');
+        $stok = $this->input->post('stok');
         $reg = array(',00', 'Rp', '.');
         $regStr = array('', '', '');
 
@@ -49,7 +50,8 @@ class Kapal extends CI_Controller
             'jam_keberangkatan' => $jam_keberangkatan,
             'jam_tiba' => $jam_tiba,
             'harga' => $hargaStr,
-            'tersedia' => 1
+            'tersedia' => 1,
+            'stok' => $stok
         );
 
         $this->mdlkapal->insertKapal('tb_kapal', $dataInsert);
@@ -77,6 +79,7 @@ class Kapal extends CI_Controller
         $jam_tiba = $this->input->post('jam_tiba');
         $harga = $this->input->post('harga');
         $status = $this->input->post('status');
+        $stok = $this->input->post('stok');
         $reg = array(',00', 'Rp', '.');
         $regStr = array('', '', '');
 
@@ -90,7 +93,8 @@ class Kapal extends CI_Controller
             'jam_keberangkatan' => $jam_keberangkatan,
             'jam_tiba' => $jam_tiba,
             'harga' => $hargaStr,
-            'tersedia' => $status
+            'tersedia' => $status,
+            'stok' => $stok
         );
         
         $where = array('id' => $id);

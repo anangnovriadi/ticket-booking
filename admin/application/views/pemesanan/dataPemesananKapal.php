@@ -47,8 +47,6 @@
                                     $no = 1;
 
                                     foreach($tmpPemKapal as $rows) {
-                                        // foreach($tmpKapal as $kapal) {
-                                        //     foreach($tmpUsers as $users) {
                                 ?>
                                     <tr>
                                         <td><?php echo $no; ?></td>
@@ -76,8 +74,6 @@
                                     </tr>
                                 <?php
                                     $no++;
-                                        //     }
-                                        // }
                                     }
                                 ?>
                                 </tbody>

@@ -96,6 +96,14 @@ class MdlPemesanan extends CI_Model
         $this->db->where($where);
         $this->db->update($table, $data);
     }
+
+    public function updateStok($where)
+    {
+        // $this->db->where($where);
+        // $this->db->update($table, $data);
+        $query = $this->db->query("UPDATE tb_kapal SET stok = stok - 1 WHERE id = '$where'");
+        return $query;
+    }
 }
 
 ?>
