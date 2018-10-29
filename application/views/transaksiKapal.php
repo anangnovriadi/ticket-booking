@@ -4,6 +4,7 @@
     <?php $this->load->view('layout/meta'); ?>
 	<title>Transaksi - Reni Jaya Travel</title>
 	<?php $this->load->view('layout/css'); ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -97,7 +98,8 @@
                             <a href="<?php echo base_url('/') ?>" class="btn btn-danger white">Cancel</a>
                         </div>
                         <div class="col-md-6">
-                            <input type="submit" class="btn btn-success white" value="Pesan Sekarang">
+                            <button type="submit" class="btn btn-success white" id="load" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Loading">Pesan Sekarang</button>
+                            <!-- <input type="submit" class="btn btn-success white" value="Pesan Sekarang"> -->
                         </div>
                     </div>
                 </div>

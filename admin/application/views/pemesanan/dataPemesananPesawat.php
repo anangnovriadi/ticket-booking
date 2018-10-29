@@ -35,6 +35,7 @@
                                     <th>Kode Transaksi</th>
                                     <th>Asal</th>
                                     <th>Tujuan</th>
+                                    <th>Tipe Penerbangan</th>
                                     <th>Jumlah Tiket</th>
                                     <th>Harga</th>
                                     <th>Harga Total</th>
@@ -58,6 +59,15 @@
                                         <td><?php echo $rows->kode_transaksi; ?></td>
                                         <td><?php echo $rows->keberangkatan; ?></td>
                                         <td><?php echo $rows->tujuan; ?></td>
+                                        <td>
+                                            <?php 
+                                                if($rows->penerbangan = 2) {
+                                                    echo "Return";
+                                                } else if($rows->penerbangan = 1) {
+                                                    echo "One Way";
+                                                }
+                                            ?>
+                                        </td>
                                         <td><?php echo $rows->jumlah_tiket; ?></td>
                                         <td><?php echo $rows->harga; ?></td>
                                         <td><?php echo $rows->harga_total; ?></td>
