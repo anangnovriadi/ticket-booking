@@ -112,8 +112,6 @@
                         </div>
                         <div class="col-md-6">
                             <button type="submit" class="btn btn-success white" id="load" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Loading">Pesan Sekarang</button>
-                            <!-- <input type="submit" class="btn btn-success white" value="Pesan Sekarang"> -->
-                            <!-- <i class="fa fa-spinner fa-spin"></i> -->
                         </div>
                     </div>
                 </div>
@@ -143,7 +141,7 @@
 <script>
     $('.btn').on('click', function() {
         var $this = $(this);
-    $this.button('loading');
+        $this.button('loading');
     });
 </script>
 </body>

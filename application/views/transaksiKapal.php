@@ -125,5 +125,11 @@
         $('#totalHarga').val(total);
     }
 </script>
+<script>
+    $('.btn').on('click', function() {
+        var $this = $(this);
+        $this.button('loading');
+    });
+</script>
 </body>
 </html>
