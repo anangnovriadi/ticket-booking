@@ -111,8 +111,9 @@
                             <a href="<?php echo base_url('/') ?>" class="btn btn-danger white">Cancel</a>
                         </div>
                         <div class="col-md-6">
-                            <input type="submit" class="btn btn-success white" value="Pesan Sekarang">
-                            <i class="fa fa-spinner fa-spin"></i>
+                            <button type="submit" class="btn btn-success white" id="load" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Loading">Pesan Sekarang</button>
+                            <!-- <input type="submit" class="btn btn-success white" value="Pesan Sekarang"> -->
+                            <!-- <i class="fa fa-spinner fa-spin"></i> -->
                         </div>
                     </div>
                 </div>
@@ -138,6 +139,12 @@
         $('#jumlahPenTxt').val(jumlahPen);
         $('#totalHarga').val(total);
     }
+</script>
+<script>
+    $('.btn').on('click', function() {
+        var $this = $(this);
+    $this.button('loading');
+    });
 </script>
 </body>
 </html>
