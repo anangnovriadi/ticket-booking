@@ -4,6 +4,7 @@
     <?php $this->load->view('layout/meta'); ?>
 	<title>Transaksi - Reni Jaya Travel</title>
 	<?php $this->load->view('layout/css'); ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -76,6 +77,15 @@
                                         </p>
                                     </div>
                                     <div style="padding-top: 14px;" class="bag-c-details">
+                                        <p class="left-c"><span class="badge badge-a">Penerbangan</span></p>
+                                        <div class="form-group left-a left-c">
+                                            <select onchange="hitung()" id="penerbangan" class="form-control" name="penerbangan">
+                                                <option selected="selected" value="1">One Way</option>
+                                                <option value="2">Return</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div style="padding-top: 14px;" class="bag-c-details">
                                         <p class="left-c"><span class="bold">Harga</span></a></p>
                                         <p class="left-a left-c"><input type="text" class="input-trans" value="<?php echo $row->harga ?>" onkeyup="hitung()" id="harga"></a></p>
                                     </div>
@@ -102,6 +112,7 @@
                         </div>
                         <div class="col-md-6">
                             <input type="submit" class="btn btn-success white" value="Pesan Sekarang">
+                            <i class="fa fa-spinner fa-spin"></i>
                         </div>
                     </div>
                 </div>
@@ -121,7 +132,8 @@
     function hitung() {
         var harga = $('#harga').val();
         var jumlahPen = $('#jumlahPen').val();
-        var total = harga * jumlahPen;
+        var penerbangan = $('#penerbangan').val();
+        var total = harga * jumlahPen * penerbangan;
 
         $('#jumlahPenTxt').val(jumlahPen);
         $('#totalHarga').val(total);

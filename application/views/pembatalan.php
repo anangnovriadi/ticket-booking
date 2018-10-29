@@ -22,6 +22,7 @@
                 <ul>
                     <li>Kunjungi kantor kami di Jalan Johar No.14, Surabaya pada Jam Kerja 08.00 - 17.00</li>
                     <li>Bawa struk pembayaran</li>
+                    <li>Refund akan pembelian tiket hanya akan mendapatkan sebesar 50% dari harga tiket</li>
                     <li>Bawa ticket booking / data ticket</li>
                     <li>Pembatalan dapat dilakukan paling lambat 1 jam sebelum keberangkatan terjadwal pesawat / kapal</li>
                     <li>Jika pembatalan dilakukan lebih dari itu, maka tiket yang dipesan akan dinyatakan hangus</li>
