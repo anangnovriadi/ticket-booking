@@ -16,7 +16,7 @@
                 <div style="margin-top: 6%;">
                     <div class="modal-content md-cs">
                         <div class="modal-header bg-purple text-white">
-                            <h3 class="modal-title" id="myModalLabel"><i class="fa fa-user"></i> Login</h3>
+                            <h3 class="modal-title" style="color: white;" id="myModalLabel"><i class="fa fa-user"></i> Login</h3>
                         </div>
                         <form action="<?php echo base_url('login/auth') ?>" method="post">
                             <div class="modal-body">

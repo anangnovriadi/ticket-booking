@@ -16,6 +16,7 @@ class Register extends CI_Controller {
         $nama_lengkap = $this->input->post('nama_lengkap');
         $email = $this->input->post('email');
         $no_telp = $this->input->post('no_telp');
+        $no_ktp = $this->input->post('no_ktp');
         $alamat = $this->input->post('alamat');
         $password = $this->input->post('password');
         $pass = md5($password);
@@ -26,6 +27,7 @@ class Register extends CI_Controller {
             'email' => $email,
             'nama_lengkap' => $nama_lengkap,
             'no_telp' => $no_telp,
+            'no_ktp' => $no_ktp,
             'alamat' => $alamat,
             'password' => $pass,
             'status' => 1,

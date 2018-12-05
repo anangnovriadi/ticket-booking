@@ -301,7 +301,7 @@ class Laporan extends CI_Controller
         $bulan = $this->input->post('bulan');
         $kapal = $this->mdlpemesanan->getAllPemesananKapalBulan($bulan)->result();
         
-        $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pemesanan Tiket Kapal Bulan".$listBulan[$bulan]);
+        $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pemesanan Tiket Kapal Bulan ".$listBulan[$bulan]);
         $excel->getActiveSheet()->mergeCells('A1:H1');
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setBold(TRUE);
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setSize(15);
@@ -414,7 +414,7 @@ class Laporan extends CI_Controller
         $bulan = $this->input->post('bulan');
         $pesawat = $this->mdlpemesanan->getAllPemesananPesawatBulan($bulan)->result();
         
-        $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pemesanan Tiket Pesawat Bulan".$listBulan[$bulan]);
+        $excel->setActiveSheetIndex(0)->setCellValue('A1', "Data Pemesanan Tiket Pesawat Bulan ".$listBulan[$bulan]);
         $excel->getActiveSheet()->mergeCells('A1:H1');
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setBold(TRUE);
         $excel->getActiveSheet()->getStyle('A1')->getFont()->setSize(15);

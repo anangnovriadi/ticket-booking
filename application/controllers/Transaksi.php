@@ -31,7 +31,7 @@ class Transaksi extends CI_Controller {
             $tgl_keberangkatan = $this->input->post('tgl_keberangkatan');
             $jumlah_penumpang = $this->input->post('jumlah_pen');
             $total_harga = $this->input->post('total_harga');
-            $penerbangan = $this->input->post('penerbangan');
+            // $penerbangan = $this->input->post('penerbangan');
             $id_user = $this->session->userdata('id');
             date_default_timezone_set("Asia/Bangkok");
             $dateNow = date('Y-m-d H:i:s');
@@ -51,7 +51,7 @@ class Transaksi extends CI_Controller {
                 'bayar' => 0,
                 'tgl_pemesanan' => $dateNow,
                 'kode_transaksi' => $kt,
-                'penerbangan' => $penerbangan
+                'penerbangan' => '0'
             );
 
             $this->mdlinserttiket->insert('tb_tiket_pesawat', $dataInsert);

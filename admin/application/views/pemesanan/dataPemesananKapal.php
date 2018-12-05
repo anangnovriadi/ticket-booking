@@ -52,14 +52,14 @@
                                         <td><?php echo $no; ?></td>
                                         <td><?php echo $rows->username; ?></td>
                                         <td><?php echo $rows->nama_kapal; ?></td>
-                                        <td><?php echo $rows->tgl_keberangkatan; ?></td>
+                                        <td><?php echo tgl_indo($rows->tgl_keberangkatan); ?></td>
                                         <td><?php echo $rows->kode_transaksi; ?></td>
                                         <td><?php echo $rows->pelabuhan_asal; ?></td>
                                         <td><?php echo $rows->pelabuhan_tujuan; ?></td>
                                         <td><?php echo $rows->jumlah_tiket; ?></td>
-                                        <td><?php echo $rows->harga; ?></td>
-                                        <td><?php echo $rows->harga_total; ?></td>
-                                        <td><?php echo $rows->tgl_pemesanan; ?></td>
+                                        <td><?php echo 'Rp.'.nominal($rows->harga); ?></td>
+                                        <td><?php echo 'Rp.'.nominal($rows->harga_total); ?></td>
+                                        <td><?php echo tgl_indo($rows->tgl_pemesanan); ?></td>
                                         <td>
                                             <a href="<?php echo base_url('admin/pemesanan/pemesananKapal/edit/'.$rows->id); ?>">
                                                 <?php 
