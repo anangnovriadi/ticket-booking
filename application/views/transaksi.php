@@ -73,10 +73,10 @@
                                     <div class="bag-c-details">
                                         <p class="left-c"><span class="badge badge-a">Pilih Jumlah Penumpang</span></a></p>
                                         <p class="left-a left-c">
-                                            <input type="number" style="text-align: center;float: right;width: 50%;" id="jumlahPen" value="0" onkeyup="hitung()" class="form-control">
+                                            <input type="text" style="text-align: center;float: right;width: 50%;" id="jumlahPen" value="0" onkeyup="hitung()" class="form-control">
                                         </p>
                                     </div>
-                                    <div style="padding-top: 14px;" class="bag-c-details">
+                                    <!-- <div style="padding-top: 14px;" class="bag-c-details">
                                         <p class="left-c"><span class="badge badge-a">Penerbangan</span></p>
                                         <div class="form-group left-a left-c">
                                             <select onchange="hitung()" id="penerbangan" class="form-control" name="penerbangan">
@@ -84,7 +84,7 @@
                                                 <option value="2">Return</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div style="padding-top: 14px;" class="bag-c-details">
                                         <p class="left-c"><span class="bold">Harga</span></a></p>
                                         <p class="left-a left-c"><input type="text" class="input-trans" value="<?php echo $row->harga ?>" onkeyup="hitung()" id="harga"></a></p>
@@ -132,7 +132,7 @@
         var harga = $('#harga').val();
         var jumlahPen = $('#jumlahPen').val();
         var penerbangan = $('#penerbangan').val();
-        var total = harga * jumlahPen * penerbangan;
+        var total = harga * jumlahPen;
 
         $('#jumlahPenTxt').val(jumlahPen);
         $('#totalHarga').val(total);

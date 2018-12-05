@@ -69,7 +69,7 @@
                                     <div class="bag-c-details">
                                         <p class="left-c"><span class="badge badge-a">Pilih Jumlah Penumpang</span></a></p>
                                         <p class="left-a left-c">
-                                            <input type="number" style="text-align: center;float: right;width: 50%;" id="jumlahPen" value="0" onkeyup="hitung()" class="form-control">
+                                            <input type="text" style="text-align: center;float: right;width: 50%;" id="jumlahPen" value="0" onkeyup="hitung()" class="form-control">
                                         </p>
                                     </div>
                                     <div style="padding-top: 14px;" class="bag-c-details">

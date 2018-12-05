@@ -31,6 +31,7 @@ class PemesananKapal extends CI_Controller {
     {
         $id = $this->input->post('id');
         $id_kapal = $this->input->post('id_kapal');
+        $jml = $this->input->post('jumlah_tiket');
         $bayar = $this->input->post('bayar');
 
         $dataUpdate = array(
@@ -39,7 +40,7 @@ class PemesananKapal extends CI_Controller {
         
         $where = array('id' => $id);
 
-        $this->mdlpemesanan->updateStok($id_kapal);
+        $this->mdlpemesanan->updateStok($id_kapal, $jml);
         $this->mdlpemesanan->updateBayar('tb_tiket_kapal', $where, $dataUpdate);
         redirect(base_url('admin/pemesanan/pemesananKapal'));
     }
