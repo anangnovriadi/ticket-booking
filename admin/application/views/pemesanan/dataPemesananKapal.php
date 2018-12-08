@@ -22,8 +22,11 @@
         <section class="content container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="chart-box">
+                    <div class="chart-box" id="print">
                         <h4>Data Tiket Kapal</h4>
+                        <div style="padding-top: 8px;">
+                            <button class="btn btn-success" onclick="printTiket();">Cetak</button>
+                        </div>
                         <div class="table-responsive m-top-2">
                             <table class="table table-bordered">
                                 <thead>
@@ -82,15 +85,26 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        
+        </section>    
     </div> 
 
     <?php $this->load->view('layout/footer'); ?>
 </div>
 
 <?php $this->load->view('layout/js'); ?>
+<script>
+    function printTiket() 
+    {
+        var divToPrint = document.getElementById('print');
+        var newWin = window.open('','Print-Window');
+        newWin.document.open();
+        newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+        newWin.document.close();
+        setTimeout(function() {
+            newWin.close();
+        }, 10);
+    }
+</script>
 
 </body>
 </html>
