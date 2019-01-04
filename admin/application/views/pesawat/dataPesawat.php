@@ -56,7 +56,7 @@
                                         <td><?php echo $rows->jam_keberangkatan; ?></td>
                                         <td><?php echo $rows->jam_tiba; ?></td>
                                         <td><?php echo $rows->kelas_penerbangan; ?></td>
-                                        <td><?php echo $rows->harga; ?></td>
+                                        <td><?php echo 'Rp.'.nominal($rows->harga); ?></td>
                                         <td>
                                             <?php
                                                 if($rows->tersedia == 1) {
